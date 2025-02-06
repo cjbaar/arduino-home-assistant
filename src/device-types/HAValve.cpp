@@ -176,7 +176,6 @@ bool HAValve::publishState(StatePublishType type, ValveState state, int16_t posi
 {
   const __FlashStringHelper *stateStr = nullptr;
   char positionStr[6 + 1] = {0}; // int16_t digits with null terminator
-  HANumeric positionNum = HANumeric(position, 0);
   
   // for state only or combo
   if (type == StatePublishString  ||  type == StatePublishJson) {
@@ -228,8 +227,9 @@ bool HAValve::publishState(StatePublishType type, ValveState state, int16_t posi
   
   if (type == StatePublishJson) {
     char jsonState[40];
-    sprintf(
+    snprintf(
       jsonState,
+      40,
       "{\"%s\":\"%s\",\"%s\":%d}",
       AHAFROMFSTR(HAStateProperty),
       AHAFROMFSTR(stateStr),
