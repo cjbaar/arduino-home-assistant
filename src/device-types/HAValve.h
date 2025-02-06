@@ -122,20 +122,24 @@ public:
         { return _currentPosition; }
 
     /**
-     * Sets the value of the open position.
+     * Set/get the value of the open position.
      *
      * @param value The setp value. By default it's `100`.
      */
     inline void setPositionOpen(const uint16_t value)
         { _positionOpen = HANumeric(value, 0); }
+    inline int16_t getPositionOpen()
+        { return _positionOpen.toInt16(); }
 
     /**
-     * Sets the value of the closed position.
+     * Set/get the value of the closed position.
      *
      * @param value The setp value. By default it's `0`.
      */
     inline void setPositionClosed(const uint16_t value)
         { _positionClosed = HANumeric(value, 0); }
+    inline int16_t getPositionClosed()
+        { return _positionClosed.toInt16(); }
 
     /**
      * Sets class of the device.
