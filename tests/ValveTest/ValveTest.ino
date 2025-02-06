@@ -102,10 +102,51 @@ AHA_TEST(ValveTest, default_params_with_position) {
         (
             "{"
             "\"uniq_id\":\"uniqueValve\","
+            "\"pos\":\"true\","
             "\"dev\":{\"ids\":\"testDevice\"},"
             "\"stat_t\":\"testData/testDevice/uniqueValve/stat_t\","
-            "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\","
-            "\"pos_t\":\"testData/testDevice/uniqueValve/pos_t\""
+            "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\""
+            "}"
+        )
+    )
+    assertEqual(1, mock->getFlushedMessagesNb()); // only config should be pushed
+}
+
+AHA_TEST(ValveTest, default_params_with_stop_feature) {
+    prepareTest
+
+    HAValve valve(testUniqueId, HAValve::StopFeature);
+    assertEntityConfig(
+        mock,
+        valve,
+        (
+            "{"
+            "\"uniq_id\":\"uniqueValve\","
+            "\"pl_stop\":\"STOP\","
+            "\"dev\":{\"ids\":\"testDevice\"},"
+            "\"stat_t\":\"testData/testDevice/uniqueValve/stat_t\","
+            "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\""
+            "}"
+        )
+    )
+    assertEqual(1, mock->getFlushedMessagesNb()); // only config should be pushed
+}
+
+AHA_TEST(ValveTest, default_params_with_all_features) {
+    prepareTest
+
+    HAValve valve(testUniqueId, HAValve::PositionFeature|HAValve::StopFeature);
+    assertEntityConfig(
+        mock,
+        valve,
+        (
+            "{"
+            "\"uniq_id\":\"uniqueValve\","
+            "\"pos\":\"true\","
+            "\"pl_stop\":\"STOP\","
+            "\"dev\":{\"ids\":\"testDevice\"},"
+            "\"stat_t\":\"testData/testDevice/uniqueValve/stat_t\","
+            "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\""
             "}"
         )
     )
@@ -159,8 +200,8 @@ AHA_TEST(ValveTest, publish_last_known_state_with_position) {
     mqtt.loop();
 
     assertEqual(3, mock->getFlushedMessagesNb());
-    assertMqttMessage(1, AHATOFSTR(StateTopic), "closed", true)
-    assertMqttMessage(2, AHATOFSTR(PositionTopic), "100", true)
+    assertMqttMessage(1, AHATOFSTR(StateTopic), "{\"state\":\"closed\",\"position\":100}", true)
+    assertMqttMessage(2, AHATOFSTR(StateTopic), "100", true)
 }
 
 AHA_TEST(ValveTest, publish_nothing_if_retained) {
@@ -230,6 +271,48 @@ AHA_TEST(ValveTest, device_class) {
             "{"
             "\"uniq_id\":\"uniqueValve\","
             "\"dev_cla\":\"testClass\","
+            "\"dev\":{\"ids\":\"testDevice\"},"
+            "\"stat_t\":\"testData/testDevice/uniqueValve/stat_t\","
+            "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\""
+            "}"
+        )
+    )
+}
+
+AHA_TEST(ValveTest, position_open) {
+    prepareTest
+
+    HAValve valve(testUniqueId);
+    valve.setPositionOpen(95);
+
+    assertEntityConfig(
+        mock,
+        valve,
+        (
+            "{"
+            "\"uniq_id\":\"uniqueValve\","
+            "\"pos_open\":95,"
+            "\"dev\":{\"ids\":\"testDevice\"},"
+            "\"stat_t\":\"testData/testDevice/uniqueValve/stat_t\","
+            "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\""
+            "}"
+        )
+    )
+}
+
+AHA_TEST(ValveTest, position_closed) {
+    prepareTest
+
+    HAValve valve(testUniqueId);
+    valve.setPositionClosed(5);
+
+    assertEntityConfig(
+        mock,
+        valve,
+        (
+            "{"
+            "\"uniq_id\":\"uniqueValve\","
+            "\"pos_clsd\":5,"
             "\"dev\":{\"ids\":\"testDevice\"},"
             "\"stat_t\":\"testData/testDevice/uniqueValve/stat_t\","
             "\"cmd_t\":\"testData/testDevice/uniqueValve/cmd_t\""
@@ -361,6 +444,16 @@ AHA_TEST(ValveTest, publish_state_opening) {
     assertSingleMqttMessage(AHATOFSTR(StateTopic), "opening", true)
 }
 
+AHA_TEST(ValveTest, publish_state_opening_with_position) {
+    prepareTest
+
+    mock->connectDummy();
+    HAValve valve(testUniqueId, HAValve::PositionFeature);
+
+    assertTrue(valve.setStateWithPosition(HAValve::StateOpening, 45));
+    assertSingleMqttMessage(AHATOFSTR(StateTopic), "{\"state\":\"opening\",\"position\":45}", true)
+}
+
 AHA_TEST(ValveTest, publish_position) {
     prepareTest
 
@@ -368,7 +461,7 @@ AHA_TEST(ValveTest, publish_position) {
     HAValve valve(testUniqueId, HAValve::PositionFeature);
 
     assertTrue(valve.setPosition(250));
-    assertSingleMqttMessage(AHATOFSTR(PositionTopic), "250", true)
+    assertSingleMqttMessage(AHATOFSTR(StateTopic), "250", true)
 }
 
 AHA_TEST(ValveTest, publish_position_max) {
@@ -378,7 +471,7 @@ AHA_TEST(ValveTest, publish_position_max) {
     HAValve valve(testUniqueId, HAValve::PositionFeature);
 
     assertTrue(valve.setPosition(32767));
-    assertSingleMqttMessage(AHATOFSTR(PositionTopic), "32767", true)
+    assertSingleMqttMessage(AHATOFSTR(StateTopic), "32767", true)
 }
 
 AHA_TEST(ValveTest, publish_position_debounce) {
@@ -401,7 +494,7 @@ AHA_TEST(ValveTest, publish_position_debounce_skip) {
     valve.setCurrentPosition(250);
 
     assertTrue(valve.setPosition(250, true));
-    assertSingleMqttMessage(AHATOFSTR(PositionTopic), "250", true)
+    assertSingleMqttMessage(AHATOFSTR(StateTopic), "250", true)
 }
 
 AHA_TEST(ValveTest, command_open) {
@@ -432,6 +525,26 @@ AHA_TEST(ValveTest, command_stop) {
     mock->fakeMessage(AHATOFSTR(CommandTopic), F("STOP"));
 
     assertCommandCallbackCalled(HAValve::CommandStop, &valve)
+}
+
+AHA_TEST(ValveTest, command_numeric_invalid_without_feature) {
+    prepareTest
+
+    HAValve valve(testUniqueId);
+    valve.onCommand(onCommandReceived);
+    mock->fakeMessage(AHATOFSTR(CommandTopic), F("33"));
+
+    assertCommandCallbackNotCalled()
+}
+
+AHA_TEST(ValveTest, command_numeric_with_feature) {
+    prepareTest
+
+    HAValve valve(testUniqueId, HAValve::PositionFeature);
+    valve.onCommand(onCommandReceived);
+    mock->fakeMessage(AHATOFSTR(CommandTopic), F("33"));
+
+    assertCommandCallbackCalled((int16_t)33, &valve)
 }
 
 AHA_TEST(ValveTest, command_invalid) {

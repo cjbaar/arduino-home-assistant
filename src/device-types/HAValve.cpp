@@ -85,17 +85,21 @@ void HAValve::buildSerializer()
     _serializer->set(AHATOFSTR(HADeviceClassProperty), _class);
     _serializer->set(AHATOFSTR(HAIconProperty), _icon);
     
-    _serializer->set(
-      AHATOFSTR(HAPositionOpenProperty),
-      &_positionOpen,
-      HASerializer::NumberPropertyType
-    );
+    if (_positionOpen.toInt16() != 100) {
+      _serializer->set(
+        AHATOFSTR(HAPositionOpenProperty),
+        &_positionOpen,
+        HASerializer::NumberPropertyType
+      );
+    }
     
-    _serializer->set(
-      AHATOFSTR(HAPositionClosedProperty),
-      &_positionClosed,
-      HASerializer::NumberPropertyType
-    );
+    if (_positionClosed.toInt16() != 0) {
+      _serializer->set(
+        AHATOFSTR(HAPositionClosedProperty),
+        &_positionClosed,
+        HASerializer::NumberPropertyType
+      );
+    }
     
     if (_features & PositionFeature) {
       _serializer->set(
@@ -258,7 +262,7 @@ void HAValve::handleCommand(const uint8_t* cmd, const uint16_t length)
     } else if (_features & PositionFeature) {
       HANumeric number = HANumeric::fromStr(cmd, length);
       if (number.isSet()) {
-        _commandCallback(number.toUInt16(), this);
+        _commandCallback(number.toInt16(), this);
       }
     }
 }
