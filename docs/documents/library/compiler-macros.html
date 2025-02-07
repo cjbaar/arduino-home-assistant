@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>Compiler macros - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/custom.js"></script>
 
@@ -148,17 +149,17 @@
           <div class="content" role="main" v-pre>
             
   <section id="compiler-macros">
-<h1>Compiler macros<a class="headerlink" href="#compiler-macros" title="Permalink to this headline">¶</a></h1>
+<h1>Compiler macros<a class="headerlink" href="#compiler-macros" title="Permalink to this heading">¶</a></h1>
 <p>The library supports couple of macros that are defined in the <cite>ArduinoHADefines.h</cite> file.
 You can uncomment them in this specific file or provide flags directly to compiler (for example: via Makefile).</p>
 <section id="debug-mode">
-<h2>Debug mode<a class="headerlink" href="#debug-mode" title="Permalink to this headline">¶</a></h2>
+<h2>Debug mode<a class="headerlink" href="#debug-mode" title="Permalink to this heading">¶</a></h2>
 <p>Debug mode unlocks logging feature in the library.
 Logs may be useful for debugging the communication with the Home Assistant.</p>
 <p>To enable debug mode you need to defined <cite>ARDUINOHA_DEBUG</cite> macro.</p>
 </section>
 <section id="code-optimization">
-<h2>Code optimization<a class="headerlink" href="#code-optimization" title="Permalink to this headline">¶</a></h2>
+<h2>Code optimization<a class="headerlink" href="#code-optimization" title="Permalink to this heading">¶</a></h2>
 <p>Defining one of the macros listed below results in truncating the corresponding device type.
 It may be useful if you want to save some flash memory occupied by virtual tables of those classes.</p>
 <ul class="simple">
@@ -197,7 +198,7 @@ It may be useful if you want to save some flash memory occupied by virtual table
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

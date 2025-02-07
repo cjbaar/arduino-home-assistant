@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HALock class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="halock-class">
-<h1>HALock class<a class="headerlink" href="#halock-class" title="Permalink to this headline">¶</a></h1>
+<h1>HALock class<a class="headerlink" href="#halock-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv46HALock">
 <span id="_CPPv36HALock"></span><span id="_CPPv26HALock"></span><span id="HALock"></span><span class="target" id="class_h_a_lock"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HALock</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv46HALock" title="Permalink to this definition">¶</a><br /></dt>
@@ -212,7 +213,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6HALock6HALockEPKc">
 <span id="_CPPv3N6HALock6HALockEPKc"></span><span id="_CPPv2N6HALock6HALockEPKc"></span><span id="HALock::HALock__cCP"></span><span class="target" id="class_h_a_lock_1ac72784dbcb690bb36fe9135314b1b28c"></span><span class="sig-name descname"><span class="n"><span class="pre">HALock</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock6HALockEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>uniqueId</strong> – The unique ID of the lock. It needs to be unique in a scope of your device. </p>
 </dd>
 </dl>
@@ -223,13 +224,13 @@
 <span id="_CPPv3N6HALock8setStateEK9LockStateKb"></span><span id="_CPPv2N6HALock8setStateEK9LockStateKb"></span><span id="HALock::setState__LockStateC.bC"></span><span class="target" id="class_h_a_lock_1afb75873a2092721b9f9719fbd8fce588"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HALock9LockStateE" title="HALock::LockState"><span class="n"><span class="pre">LockState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock8setStateEK9LockStateKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes state of the lock and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>state</strong> – New state of the lock. </p></li>
 <li><p><strong>force</strong> – Forces to update state without comparing it to a previous known state. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -240,7 +241,7 @@
 <span id="_CPPv3N6HALock15setCurrentStateEK9LockState"></span><span id="_CPPv2N6HALock15setCurrentStateEK9LockState"></span><span id="HALock::setCurrentState__LockStateC"></span><span class="target" id="class_h_a_lock_1a93031febb37d3f0ef6f7f2517dbab892"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HALock9LockStateE" title="HALock::LockState"><span class="n"><span class="pre">LockState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock15setCurrentStateEK9LockState" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets current state of the lock without publishing it to Home Assistant. This method may be useful if you want to change state before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – New state of the lock. </p>
 </dd>
 </dl>
@@ -257,7 +258,7 @@
 <span id="_CPPv3N6HALock7setIconEPKc"></span><span id="_CPPv2N6HALock7setIconEPKc"></span><span id="HALock::setIcon__cCP"></span><span class="target" id="class_h_a_lock_1a49a737fab9e7df6b4fc4c0da4351b369"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets icon of the lock. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>icon</strong> – The icon name. </p>
 </dd>
 </dl>
@@ -268,7 +269,7 @@
 <span id="_CPPv3N6HALock9setRetainEKb"></span><span id="_CPPv2N6HALock9setRetainEKb"></span><span id="HALock::setRetain__bC"></span><span class="target" id="class_h_a_lock_1abacc6b02eca932b71c27cba7421d32ba"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRetain</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">retain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock9setRetainEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets retain flag for the lock’s command. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the command produced by Home Assistant will be retained.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>retain</strong> – </p>
 </dd>
 </dl>
@@ -279,7 +280,7 @@
 <span id="_CPPv3N6HALock13setOptimisticEKb"></span><span id="_CPPv2N6HALock13setOptimisticEKb"></span><span id="HALock::setOptimistic__bC"></span><span class="target" id="class_h_a_lock_1a66766a151565ae7b1df56522ce3af1c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOptimistic</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">optimistic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock13setOptimisticEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets optimistic flag for the lock state. In this mode the lock state doesn’t need to be reported back to the HA panel when a command is received. By default the optimistic mode is disabled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>optimistic</strong> – The optimistic mode (<code class="docutils literal notranslate"><span class="pre">true</span></code> - enabled, <code class="docutils literal notranslate"><span class="pre">false</span></code> - disabled). </p>
 </dd>
 </dl>
@@ -290,7 +291,7 @@
 <span id="_CPPv3N6HALock9onCommandEPFv11LockCommandP6HALockE"></span><span id="_CPPv2N6HALock9onCommandEPFv11LockCommandP6HALockE"></span><span class="target" id="class_h_a_lock_1ab0735602281fc539f662b3443f1e4176"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onCommand</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">callback</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><a class="reference internal" href="#_CPPv4N6HALock11LockCommandE" title="HALock::LockCommand"><span class="n"><span class="pre">LockCommand</span></span></a><span class="w"> </span><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv46HALock" title="HALock"><span class="n"><span class="pre">HALock</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sender</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock9onCommandEPFv11LockCommandP6HALockE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Registers callback that will be called each time the lock/unlock/open command from the HA is received. Please note that it’s not possible to register multiple callbacks for the same lock.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -322,10 +323,10 @@
 <span id="_CPPv3N6HALock12publishStateEK9LockState"></span><span id="_CPPv2N6HALock12publishStateEK9LockState"></span><span id="HALock::publishState__LockStateC"></span><span class="target" id="class_h_a_lock_1a641b2db6e3d53bff1749e80e79164e5c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HALock9LockStateE" title="HALock::LockState"><span class="n"><span class="pre">LockState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock12publishStateEK9LockState" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given state.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The state to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -336,7 +337,7 @@
 <span id="_CPPv3N6HALock13handleCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HALock13handleCommandEPK7uint8_tK8uint16_t"></span><span id="HALock::handleCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_lock_1aebb02a71ad36e92307e2a3a337936a17"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HALock13handleCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given command and executes the lock’s callback with proper enum’s property.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -398,7 +399,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

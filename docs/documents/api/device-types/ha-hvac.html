@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HAHVAC class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="hahvac-class">
-<h1>HAHVAC class<a class="headerlink" href="#hahvac-class" title="Permalink to this headline">¶</a></h1>
+<h1>HAHVAC class<a class="headerlink" href="#hahvac-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv46HAHVAC">
 <span id="_CPPv36HAHVAC"></span><span id="_CPPv26HAHVAC"></span><span id="HAHVAC"></span><span class="target" id="class_h_a_h_v_a_c"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HAHVAC</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv46HAHVAC" title="Permalink to this definition">¶</a><br /></dt>
@@ -375,10 +376,10 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6HAHVAC6HAHVACEPKcK8uint16_tK15NumberPrecision">
 <span id="_CPPv3N6HAHVAC6HAHVACEPKcK8uint16_tK15NumberPrecision"></span><span id="_CPPv2N6HAHVAC6HAHVACEPKcK8uint16_tK15NumberPrecision"></span><span id="HAHVAC::HAHVAC__cCP.uint16_tC.NumberPrecisionC"></span><span class="target" id="class_h_a_h_v_a_c_1a2e480b1d45596769d4ce825059027745"></span><span class="sig-name descname"><span class="n"><span class="pre">HAHVAC</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">features</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC8Features15DefaultFeaturesE" title="HAHVAC::DefaultFeatures"><span class="n"><span class="pre">DefaultFeatures</span></span></a>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">NumberPrecision</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">precision</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">PrecisionP1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC6HAHVACEPKcK8uint16_tK15NumberPrecision" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uniqueId</strong> – The unique ID of the HVAC. It needs to be unique in a scope of your device. </p></li>
-<li><p><strong>features</strong> – Features that should be enabled for the HVAC. </p></li>
+<li><p><strong>features</strong> – <a class="reference internal" href="#class_h_a_h_v_a_c_1a322f13f924a0ac67d47e7824aa270543"><span class="std std-ref">Features</span></a> that should be enabled for the HVAC. </p></li>
 <li><p><strong>precision</strong> – The precision of temperatures reported by the HVAC. </p></li>
 </ul>
 </dd>
@@ -396,13 +397,13 @@
 <span id="_CPPv3N6HAHVAC21setCurrentTemperatureERK9HANumericKb"></span><span id="_CPPv2N6HAHVAC21setCurrentTemperatureERK9HANumericKb"></span><span id="HAHVAC::setCurrentTemperature__HANumericCR.bC"></span><span class="target" id="class_h_a_h_v_a_c_1a87c927c2c45169c64e824882cafc0a20"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC21setCurrentTemperatureERK9HANumericKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes current temperature of the HVAC and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>temperature</strong> – New current temperature. </p></li>
 <li><p><strong>force</strong> – Forces to update the temperature without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -455,13 +456,13 @@
 <span id="_CPPv3N6HAHVAC9setActionEK6ActionKb"></span><span id="_CPPv2N6HAHVAC9setActionEK6ActionKb"></span><span id="HAHVAC::setAction__ActionC.bC"></span><span class="target" id="class_h_a_h_v_a_c_1af6b64fced7a1dee67ab9aa10bb36898e"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC6ActionE" title="HAHVAC::Action"><span class="n"><span class="pre">Action</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">action</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC9setActionEK6ActionKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes action of the HVAC and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>action</strong> – New action. </p></li>
 <li><p><strong>force</strong> – Forces to update the action without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -472,13 +473,13 @@
 <span id="_CPPv3N6HAHVAC11setAuxStateEKbKb"></span><span id="_CPPv2N6HAHVAC11setAuxStateEKbKb"></span><span id="HAHVAC::setAuxState__bC.bC"></span><span class="target" id="class_h_a_h_v_a_c_1a3fc374704f0f783162ac9beb180ff4a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAuxState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC11setAuxStateEKbKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes state of the aux heating and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>state</strong> – The new state. </p></li>
 <li><p><strong>force</strong> – Forces to update the state without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -489,13 +490,13 @@
 <span id="_CPPv3N6HAHVAC10setFanModeEK7FanModeKb"></span><span id="_CPPv2N6HAHVAC10setFanModeEK7FanModeKb"></span><span id="HAHVAC::setFanMode__FanModeC.bC"></span><span class="target" id="class_h_a_h_v_a_c_1aaf6cb1b099aa4e2e4daabfb9986a5db1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFanMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC7FanModeE" title="HAHVAC::FanMode"><span class="n"><span class="pre">FanMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC10setFanModeEK7FanModeKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes mode of the fan of the HVAC and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mode</strong> – New fan’s mode. </p></li>
 <li><p><strong>force</strong> – Forces to update the mode without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -506,13 +507,13 @@
 <span id="_CPPv3N6HAHVAC12setSwingModeEK9SwingModeKb"></span><span id="_CPPv2N6HAHVAC12setSwingModeEK9SwingModeKb"></span><span id="HAHVAC::setSwingMode__SwingModeC.bC"></span><span class="target" id="class_h_a_h_v_a_c_1a318ae13360d71e98bb6146d5699d5210"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSwingMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC9SwingModeE" title="HAHVAC::SwingMode"><span class="n"><span class="pre">SwingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC12setSwingModeEK9SwingModeKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes swing mode of the HVAC and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mode</strong> – New swing mode. </p></li>
 <li><p><strong>force</strong> – Forces to update the mode without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -523,13 +524,13 @@
 <span id="_CPPv3N6HAHVAC7setModeEK4ModeKb"></span><span id="_CPPv2N6HAHVAC7setModeEK4ModeKb"></span><span id="HAHVAC::setMode__ModeC.bC"></span><span class="target" id="class_h_a_h_v_a_c_1a4d2c80762e2b9bfd4cf465cbd8ca40d9"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC4ModeE" title="HAHVAC::Mode"><span class="n"><span class="pre">Mode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC7setModeEK4ModeKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes mode of the HVAC and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mode</strong> – New HVAC’s mode. </p></li>
 <li><p><strong>force</strong> – Forces to update the mode without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -540,13 +541,13 @@
 <span id="_CPPv3N6HAHVAC20setTargetTemperatureERK9HANumericKb"></span><span id="_CPPv2N6HAHVAC20setTargetTemperatureERK9HANumericKb"></span><span id="HAHVAC::setTargetTemperature__HANumericCR.bC"></span><span class="target" id="class_h_a_h_v_a_c_1aa1f9dc132b00db0da6e21384c0052dad"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTargetTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC20setTargetTemperatureERK9HANumericKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes target temperature of the HVAC and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>temperature</strong> – Target temperature to set. </p></li>
 <li><p><strong>force</strong> – Forces to update the mode without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -599,7 +600,7 @@
 <span id="_CPPv3N6HAHVAC28setCurrentCurrentTemperatureERK9HANumeric"></span><span id="_CPPv2N6HAHVAC28setCurrentCurrentTemperatureERK9HANumeric"></span><span id="HAHVAC::setCurrentCurrentTemperature__HANumericCR"></span><span class="target" id="class_h_a_h_v_a_c_1a994c9c9b01baeeee71d7850dbcb97243"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentCurrentTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC28setCurrentCurrentTemperatureERK9HANumeric" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets current temperature of the HVAC without publishing it to Home Assistant. This method may be useful if you want to change temperature before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – New current temperature. </p>
 </dd>
 </dl>
@@ -658,7 +659,7 @@
 <span id="_CPPv3N6HAHVAC16setCurrentActionEK6Action"></span><span id="_CPPv2N6HAHVAC16setCurrentActionEK6Action"></span><span id="HAHVAC::setCurrentAction__ActionC"></span><span class="target" id="class_h_a_h_v_a_c_1ab156e2dddf94b4421fec4a1eeec1d05f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentAction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC6ActionE" title="HAHVAC::Action"><span class="n"><span class="pre">Action</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">action</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC16setCurrentActionEK6Action" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets action of the HVAC without publishing it to Home Assistant. This method may be useful if you want to change the action before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>action</strong> – New action. </p>
 </dd>
 </dl>
@@ -675,7 +676,7 @@
 <span id="_CPPv3N6HAHVAC18setCurrentAuxStateEKb"></span><span id="_CPPv2N6HAHVAC18setCurrentAuxStateEKb"></span><span id="HAHVAC::setCurrentAuxState__bC"></span><span class="target" id="class_h_a_h_v_a_c_1afb2feea52fa7819fb3f29885b1fc84c0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentAuxState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC18setCurrentAuxStateEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets aux heating state without publishing it to Home Assistant. This method may be useful if you want to change the state before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The new state. </p>
 </dd>
 </dl>
@@ -692,7 +693,7 @@
 <span id="_CPPv3N6HAHVAC17setCurrentFanModeEK7FanMode"></span><span id="_CPPv2N6HAHVAC17setCurrentFanModeEK7FanMode"></span><span id="HAHVAC::setCurrentFanMode__FanModeC"></span><span class="target" id="class_h_a_h_v_a_c_1ae5ae1c57dc28e8488a744e124af84172"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentFanMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC7FanModeE" title="HAHVAC::FanMode"><span class="n"><span class="pre">FanMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC17setCurrentFanModeEK7FanMode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets fan’s mode of the HVAC without publishing it to Home Assistant. This method may be useful if you want to change the mode before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> – New fan’s mode. </p>
 </dd>
 </dl>
@@ -709,7 +710,7 @@
 <span id="_CPPv3N6HAHVAC11setFanModesEK7uint8_t"></span><span id="_CPPv2N6HAHVAC11setFanModesEK7uint8_t"></span><span id="HAHVAC::setFanModes__uint8_tC"></span><span class="target" id="class_h_a_h_v_a_c_1ab67a1af6e04652c293a989c6321ebb15"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFanModes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">modes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC11setFanModesEK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets available fan modes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>modes</strong> – The modes to set (for example: <code class="docutils literal notranslate"><span class="pre">HAHVAC::AutoFanMode</span> <span class="pre">|</span> <span class="pre">HAHVAC::HighFanMode</span></code>). </p>
 </dd>
 </dl>
@@ -720,7 +721,7 @@
 <span id="_CPPv3N6HAHVAC19setCurrentSwingModeEK9SwingMode"></span><span id="_CPPv2N6HAHVAC19setCurrentSwingModeEK9SwingMode"></span><span id="HAHVAC::setCurrentSwingMode__SwingModeC"></span><span class="target" id="class_h_a_h_v_a_c_1a75d3ff43d99ac3f32c6b127e34144ef4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentSwingMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC9SwingModeE" title="HAHVAC::SwingMode"><span class="n"><span class="pre">SwingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC19setCurrentSwingModeEK9SwingMode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets swing mode of the HVAC without publishing it to Home Assistant. This method may be useful if you want to change the mode before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> – New swing mode. </p>
 </dd>
 </dl>
@@ -737,7 +738,7 @@
 <span id="_CPPv3N6HAHVAC13setSwingModesEK7uint8_t"></span><span id="_CPPv2N6HAHVAC13setSwingModesEK7uint8_t"></span><span id="HAHVAC::setSwingModes__uint8_tC"></span><span class="target" id="class_h_a_h_v_a_c_1affd56083ed3f1bd91020ca7010b44d17"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSwingModes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">modes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC13setSwingModesEK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets available swing modes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>modes</strong> – The modes to set (for example: <code class="docutils literal notranslate"><span class="pre">HAHVAC::OnSwingMode</span></code>). </p>
 </dd>
 </dl>
@@ -748,7 +749,7 @@
 <span id="_CPPv3N6HAHVAC14setCurrentModeEK4Mode"></span><span id="_CPPv2N6HAHVAC14setCurrentModeEK4Mode"></span><span id="HAHVAC::setCurrentMode__ModeC"></span><span class="target" id="class_h_a_h_v_a_c_1ae7c102358e2d62ea66b7ea4fc543ac6b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC4ModeE" title="HAHVAC::Mode"><span class="n"><span class="pre">Mode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC14setCurrentModeEK4Mode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets mode of the HVAC without publishing it to Home Assistant. This method may be useful if you want to change the mode before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> – New HVAC’s mode. </p>
 </dd>
 </dl>
@@ -765,7 +766,7 @@
 <span id="_CPPv3N6HAHVAC8setModesEK7uint8_t"></span><span id="_CPPv2N6HAHVAC8setModesEK7uint8_t"></span><span id="HAHVAC::setModes__uint8_tC"></span><span class="target" id="class_h_a_h_v_a_c_1a73d1490ba5f3af7d622a81b972d7ee08"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setModes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">modes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC8setModesEK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets available HVAC’s modes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>modes</strong> – The modes to set (for example: <code class="docutils literal notranslate"><span class="pre">HAHVAC::CoolMode</span> <span class="pre">|</span> <span class="pre">HAHVAC::HeatMode</span></code>). </p>
 </dd>
 </dl>
@@ -776,7 +777,7 @@
 <span id="_CPPv3N6HAHVAC27setCurrentTargetTemperatureERK9HANumeric"></span><span id="_CPPv2N6HAHVAC27setCurrentTargetTemperatureERK9HANumeric"></span><span id="HAHVAC::setCurrentTargetTemperature__HANumericCR"></span><span class="target" id="class_h_a_h_v_a_c_1ab2782d015a9eb54b9126019790795582"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentTargetTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC27setCurrentTargetTemperatureERK9HANumeric" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets target temperature of the HVAC without publishing it to Home Assistant. This method may be useful if you want to change the target before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – Target temperature to set. </p>
 </dd>
 </dl>
@@ -835,7 +836,7 @@
 <span id="_CPPv3N6HAHVAC7setIconEPKc"></span><span id="_CPPv2N6HAHVAC7setIconEPKc"></span><span id="HAHVAC::setIcon__cCP"></span><span class="target" id="class_h_a_h_v_a_c_1a51bcb3e2dc7d948a87eb9c52441f75e6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets icon of the HVAC. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>icon</strong> – The icon name. </p>
 </dd>
 </dl>
@@ -846,7 +847,7 @@
 <span id="_CPPv3N6HAHVAC9setRetainEKb"></span><span id="_CPPv2N6HAHVAC9setRetainEKb"></span><span id="HAHVAC::setRetain__bC"></span><span class="target" id="class_h_a_h_v_a_c_1ac690c81b682b41d4b19af148f8e612fa"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRetain</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">retain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC9setRetainEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets retain flag for the HVAC’s command. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the command produced by Home Assistant will be retained.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>retain</strong> – </p>
 </dd>
 </dl>
@@ -857,8 +858,8 @@
 <span id="_CPPv3N6HAHVAC18setTemperatureUnitE15TemperatureUnit"></span><span id="_CPPv2N6HAHVAC18setTemperatureUnitE15TemperatureUnit"></span><span id="HAHVAC::setTemperatureUnit__TemperatureUnit"></span><span class="target" id="class_h_a_h_v_a_c_1a7fb645303ec32f167b087553aebb985e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTemperatureUnit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N6HAHVAC15TemperatureUnitE" title="HAHVAC::TemperatureUnit"><span class="n"><span class="pre">TemperatureUnit</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">unit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC18setTemperatureUnitE15TemperatureUnit" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes the temperature unit.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>unit</strong> – See the TemperatureUnit enum above. </p>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>unit</strong> – See the <a class="reference internal" href="#class_h_a_h_v_a_c_1a01b8ae94c28de90306c12a2776603fac"><span class="std std-ref">TemperatureUnit</span></a> enum above. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -868,7 +869,7 @@
 <span id="_CPPv3N6HAHVAC10setMinTempEKf"></span><span id="_CPPv2N6HAHVAC10setMinTempEKf"></span><span id="HAHVAC::setMinTemp__floatC"></span><span class="target" id="class_h_a_h_v_a_c_1a079cfeb6559e0d5d70cdfa8add7f469a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMinTemp</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">min</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC10setMinTempEKf" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the minimum temperature that can be set from the Home Assistant panel.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>min</strong> – The minimum value. </p>
 </dd>
 </dl>
@@ -879,7 +880,7 @@
 <span id="_CPPv3N6HAHVAC10setMaxTempEKf"></span><span id="_CPPv2N6HAHVAC10setMaxTempEKf"></span><span id="HAHVAC::setMaxTemp__floatC"></span><span class="target" id="class_h_a_h_v_a_c_1a811ee7eb323ace41fa3a503374ece54c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMaxTemp</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC10setMaxTempEKf" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the maximum temperature that can be set from the Home Assistant panel.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>min</strong> – The maximum value. </p>
 </dd>
 </dl>
@@ -890,7 +891,7 @@
 <span id="_CPPv3N6HAHVAC11setTempStepEKf"></span><span id="_CPPv2N6HAHVAC11setTempStepEKf"></span><span id="HAHVAC::setTempStep__floatC"></span><span class="target" id="class_h_a_h_v_a_c_1ae93703b8ce72c31e63aa6c8249caba8f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTempStep</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">step</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC11setTempStepEKf" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the step of the temperature that can be set from the Home Assistant panel.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>step</strong> – The setp value. By default it’s <code class="docutils literal notranslate"><span class="pre">1</span></code>. </p>
 </dd>
 </dl>
@@ -905,7 +906,7 @@
 <p>The aux state must be reported back to HA using the <a class="reference internal" href="#class_h_a_h_v_a_c_1a3fc374704f0f783162ac9beb180ff4a5"><span class="std std-ref">HAHVAC::setAuxState</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -916,7 +917,7 @@
 <span id="_CPPv3N6HAHVAC14onPowerCommandEPFvbP6HAHVACE"></span><span id="_CPPv2N6HAHVAC14onPowerCommandEPFvbP6HAHVACE"></span><span class="target" id="class_h_a_h_v_a_c_1ab6464f4810416518e3a477edbfaae5f8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onPowerCommand</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">callback</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv46HAHVAC" title="HAHVAC"><span class="n"><span class="pre">HAHVAC</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sender</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC14onPowerCommandEPFvbP6HAHVACE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Registers callback that will be called each time the power command from HA is received. Please note that it’s not possible to register multiple callbacks for the same HVAC.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -931,7 +932,7 @@
 <p>The fan mode must be reported back to HA using the <a class="reference internal" href="#class_h_a_h_v_a_c_1aaf6cb1b099aa4e2e4daabfb9986a5db1"><span class="std std-ref">HAHVAC::setFanMode</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -946,7 +947,7 @@
 <p>The swing mode must be reported back to HA using the <a class="reference internal" href="#class_h_a_h_v_a_c_1a318ae13360d71e98bb6146d5699d5210"><span class="std std-ref">HAHVAC::setSwingMode</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -961,7 +962,7 @@
 <p>The mode must be reported back to HA using the <a class="reference internal" href="#class_h_a_h_v_a_c_1a4d2c80762e2b9bfd4cf465cbd8ca40d9"><span class="std std-ref">HAHVAC::setMode</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -976,7 +977,7 @@
 <p>The target temperature must be reported back to HA using the <a class="reference internal" href="#class_h_a_h_v_a_c_1aa1f9dc132b00db0da6e21384c0052dad"><span class="std std-ref">HAHVAC::setTargetTemperature</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -1026,10 +1027,10 @@
 <span id="_CPPv3N6HAHVAC25publishCurrentTemperatureERK9HANumeric"></span><span id="_CPPv2N6HAHVAC25publishCurrentTemperatureERK9HANumeric"></span><span id="HAHVAC::publishCurrentTemperature__HANumericCR"></span><span class="target" id="class_h_a_h_v_a_c_1adbc5e649c75e5cf03bda1c834b545cd4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishCurrentTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC25publishCurrentTemperatureERK9HANumeric" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given current temperature.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – The temperature to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1040,10 +1041,10 @@
 <span id="_CPPv3N6HAHVAC13publishActionEK6Action"></span><span id="_CPPv2N6HAHVAC13publishActionEK6Action"></span><span id="HAHVAC::publishAction__ActionC"></span><span class="target" id="class_h_a_h_v_a_c_1a380c67a82eaff07e483502e7d221fb8f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishAction</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC6ActionE" title="HAHVAC::Action"><span class="n"><span class="pre">Action</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">action</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC13publishActionEK6Action" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given action.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>action</strong> – The action to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1054,10 +1055,10 @@
 <span id="_CPPv3N6HAHVAC15publishAuxStateEKb"></span><span id="_CPPv2N6HAHVAC15publishAuxStateEKb"></span><span id="HAHVAC::publishAuxState__bC"></span><span class="target" id="class_h_a_h_v_a_c_1a07fa1a63d28432ffbea9c28dfb14c4ec"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishAuxState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC15publishAuxStateEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given aux heating state.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The state to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1068,10 +1069,10 @@
 <span id="_CPPv3N6HAHVAC14publishFanModeEK7FanMode"></span><span id="_CPPv2N6HAHVAC14publishFanModeEK7FanMode"></span><span id="HAHVAC::publishFanMode__FanModeC"></span><span class="target" id="class_h_a_h_v_a_c_1a0fc271cf66e2945519423ab728200daa"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishFanMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC7FanModeE" title="HAHVAC::FanMode"><span class="n"><span class="pre">FanMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC14publishFanModeEK7FanMode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given fan mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> – The mode to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1082,10 +1083,10 @@
 <span id="_CPPv3N6HAHVAC16publishSwingModeEK9SwingMode"></span><span id="_CPPv2N6HAHVAC16publishSwingModeEK9SwingMode"></span><span id="HAHVAC::publishSwingMode__SwingModeC"></span><span class="target" id="class_h_a_h_v_a_c_1ae2ac7f8db3271e8d44399e0249f0b5c7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishSwingMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC9SwingModeE" title="HAHVAC::SwingMode"><span class="n"><span class="pre">SwingMode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC16publishSwingModeEK9SwingMode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given swing mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> – The mode to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1096,10 +1097,10 @@
 <span id="_CPPv3N6HAHVAC11publishModeEK4Mode"></span><span id="_CPPv2N6HAHVAC11publishModeEK4Mode"></span><span id="HAHVAC::publishMode__ModeC"></span><span class="target" id="class_h_a_h_v_a_c_1a99baf4c01ff5fa73281445ac3e5afbfb"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishMode</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N6HAHVAC4ModeE" title="HAHVAC::Mode"><span class="n"><span class="pre">Mode</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">mode</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC11publishModeEK4Mode" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given mode.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mode</strong> – The mode to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1110,10 +1111,10 @@
 <span id="_CPPv3N6HAHVAC24publishTargetTemperatureERK9HANumeric"></span><span id="_CPPv2N6HAHVAC24publishTargetTemperatureERK9HANumeric"></span><span id="HAHVAC::publishTargetTemperature__HANumericCR"></span><span class="target" id="class_h_a_h_v_a_c_1abc47bd160ac47ce479187ade6b36178d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishTargetTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC24publishTargetTemperatureERK9HANumeric" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given target temperature.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – The temperature to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -1124,7 +1125,7 @@
 <span id="_CPPv3N6HAHVAC21handleAuxStateCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HAHVAC21handleAuxStateCommandEPK7uint8_tK8uint16_t"></span><span id="HAHVAC::handleAuxStateCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1a421fa823233550ba6e83f626f99a4606"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleAuxStateCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC21handleAuxStateCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given aux state command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -1138,7 +1139,7 @@
 <span id="_CPPv3N6HAHVAC18handlePowerCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HAHVAC18handlePowerCommandEPK7uint8_tK8uint16_t"></span><span id="HAHVAC::handlePowerCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1ae7435a966d9f66b4d7d5537a78a4d21a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handlePowerCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC18handlePowerCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given power command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -1152,7 +1153,7 @@
 <span id="_CPPv3N6HAHVAC20handleFanModeCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HAHVAC20handleFanModeCommandEPK7uint8_tK8uint16_t"></span><span id="HAHVAC::handleFanModeCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1a911bc44edbf6d6a11a198f7c27d4253e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleFanModeCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC20handleFanModeCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given fan mode command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -1166,7 +1167,7 @@
 <span id="_CPPv3N6HAHVAC22handleSwingModeCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HAHVAC22handleSwingModeCommandEPK7uint8_tK8uint16_t"></span><span id="HAHVAC::handleSwingModeCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1a094e3b8140b5e911785f00d550ad754f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleSwingModeCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC22handleSwingModeCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given swing mode command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -1180,7 +1181,7 @@
 <span id="_CPPv3N6HAHVAC17handleModeCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HAHVAC17handleModeCommandEPK7uint8_tK8uint16_t"></span><span id="HAHVAC::handleModeCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1ab3aad9b6c8044b06d102f09fde64a9d9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleModeCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC17handleModeCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given HVAC’s mode command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -1194,7 +1195,7 @@
 <span id="_CPPv3N6HAHVAC30handleTargetTemperatureCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N6HAHVAC30handleTargetTemperatureCommandEPK7uint8_tK8uint16_t"></span><span id="HAHVAC::handleTargetTemperatureCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1a568c7923c97b2e1dc5cf9df2beaaa509"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleTargetTemperatureCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6HAHVAC30handleTargetTemperatureCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given HVAC’s target temperature command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -1215,7 +1216,7 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6HAHVAC9_featuresE">
 <span id="_CPPv3N6HAHVAC9_featuresE"></span><span id="_CPPv2N6HAHVAC9_featuresE"></span><span id="HAHVAC::_features__uint16_tC"></span><span class="target" id="class_h_a_h_v_a_c_1ad4616e8ce7775bd220f536502c955545"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_features</span></span></span><a class="headerlink" href="#_CPPv4N6HAHVAC9_featuresE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Features enabled for the HVAC. </p>
+<dd><p><a class="reference internal" href="#class_h_a_h_v_a_c_1a322f13f924a0ac67d47e7824aa270543"><span class="std std-ref">Features</span></a> enabled for the HVAC. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -1394,7 +1395,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

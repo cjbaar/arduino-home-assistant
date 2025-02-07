@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HASerializer class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="haserializer-class">
-<h1>HASerializer class<a class="headerlink" href="#haserializer-class" title="Permalink to this headline">¶</a></h1>
+<h1>HASerializer class<a class="headerlink" href="#haserializer-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv412HASerializer">
 <span id="_CPPv312HASerializer"></span><span id="_CPPv212HASerializer"></span><span id="HASerializer"></span><span class="target" id="class_h_a_serializer"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HASerializer</span></span></span><a class="headerlink" href="#_CPPv412HASerializer" title="Permalink to this definition">¶</a><br /></dt>
@@ -251,7 +252,7 @@
 <span id="_CPPv3N12HASerializer12HASerializerEP16HABaseDeviceTypeK7uint8_t"></span><span id="_CPPv2N12HASerializer12HASerializerEP16HABaseDeviceTypeK7uint8_t"></span><span id="HASerializer::HASerializer__HABaseDeviceTypeP.uint8_tC"></span><span class="target" id="class_h_a_serializer_1acec947d4ceff5c135b8e1018d4296ef7"></span><span class="sig-name descname"><span class="n"><span class="pre">HASerializer</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../device-types/ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">deviceType</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">maxEntriesNb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer12HASerializerEP16HABaseDeviceTypeK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates instance of the serializer for the given device type. Please note that the number JSON object’s entries needs to be known upfront. This approach reduces number of memory allocations.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>deviceType</strong> – The device type that owns the serializer. </p></li>
 <li><p><strong>maxEntriesNb</strong> – Maximum number of the output object entries. </p></li>
@@ -283,7 +284,7 @@
 <span id="_CPPv3N12HASerializer3setEPK19__FlashStringHelperPKv17PropertyValueType"></span><span id="_CPPv2N12HASerializer3setEPK19__FlashStringHelperPKv17PropertyValueType"></span><span id="HASerializer::set____FlashStringHelperCP.voidCP.PropertyValueType"></span><span class="target" id="class_h_a_serializer_1a337b8f102e8e66286501cfb9eb1dcd16"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">property</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span>, <a class="reference internal" href="#_CPPv4N12HASerializer17PropertyValueTypeE" title="HASerializer::PropertyValueType"><span class="n"><span class="pre">PropertyValueType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">valueType</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12HASerializer17PropertyValueType22ConstCharPropertyValueE" title="HASerializer::ConstCharPropertyValue"><span class="n"><span class="pre">ConstCharPropertyValue</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer3setEPK19__FlashStringHelperPKv17PropertyValueType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds a new entry to the serialized with a type of <code class="docutils literal notranslate"><span class="pre">PropertyEntryType</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>property</strong> – Pointer to the name of the property (progmem string). </p></li>
 <li><p><strong>value</strong> – Pointer to the value that’s being set. </p></li>
@@ -298,7 +299,7 @@
 <span id="_CPPv3N12HASerializer3setEK8FlagType"></span><span id="_CPPv2N12HASerializer3setEK8FlagType"></span><span id="HASerializer::set__FlagTypeC"></span><span class="target" id="class_h_a_serializer_1ab6621da36ef95e2e516d4333abbff8c5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12HASerializer8FlagTypeE" title="HASerializer::FlagType"><span class="n"><span class="pre">FlagType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">flag</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer3setEK8FlagType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds a new entry to the serializer with a type of <code class="docutils literal notranslate"><span class="pre">FlagEntryType</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>flag</strong> – Flag to add. </p>
 </dd>
 </dl>
@@ -309,7 +310,7 @@
 <span id="_CPPv3N12HASerializer5topicEPK19__FlashStringHelper"></span><span id="_CPPv2N12HASerializer5topicEPK19__FlashStringHelper"></span><span id="HASerializer::topic____FlashStringHelperCP"></span><span class="target" id="class_h_a_serializer_1a863488f26930a27d0ba9563b9e8f7037"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">topic</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer5topicEPK19__FlashStringHelper" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Adds a new entry to the serialize with a type of <code class="docutils literal notranslate"><span class="pre">TopicEntryType</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>topic</strong> – The topic name to add (progmem string). </p>
 </dd>
 </dl>
@@ -335,7 +336,7 @@
 <span id="_CPPv3N12HASerializer26calculateConfigTopicLengthEPK19__FlashStringHelperPKc"></span><span id="_CPPv2N12HASerializer26calculateConfigTopicLengthEPK19__FlashStringHelperPKc"></span><span id="HASerializer::calculateConfigTopicLength____FlashStringHelperCP.cCP"></span><span class="target" id="class_h_a_serializer_1a00b7034afca0a97610ddc380a88a24d5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calculateConfigTopicLength</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">objectId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer26calculateConfigTopicLengthEPK19__FlashStringHelperPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Calculates the size of a configuration topic for the given component and object ID. The configuration topic has structure as follows: <code class="docutils literal notranslate"><span class="pre">[discovery</span> <span class="pre">prefix]/[component]/[device</span> <span class="pre">ID]_[objectId]/config</span></code></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>component</strong> – The name of the HA component (e.g. <code class="docutils literal notranslate"><span class="pre">binary_sensor</span></code>). </p></li>
 <li><p><strong>objectId</strong> – The unique ID of a device type that’s going to publish the config. </p></li>
@@ -349,7 +350,7 @@
 <span id="_CPPv3N12HASerializer19generateConfigTopicEPcPK19__FlashStringHelperPKc"></span><span id="_CPPv2N12HASerializer19generateConfigTopicEPcPK19__FlashStringHelperPKc"></span><span id="HASerializer::generateConfigTopic__cP.__FlashStringHelperCP.cCP"></span><span class="target" id="class_h_a_serializer_1a4321df25cc8bb151ee397657258b7e80"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateConfigTopic</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">output</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">component</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">objectId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer19generateConfigTopicEPcPK19__FlashStringHelperPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Generates the configuration topic for the given component and object ID. The topic will be stored in the <code class="docutils literal notranslate"><span class="pre">output</span></code> variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>output</strong> – Buffer where the topic will be written. </p></li>
 <li><p><strong>component</strong> – The name of the HA component (e.g. <code class="docutils literal notranslate"><span class="pre">binary_sensor</span></code>). </p></li>
@@ -364,7 +365,7 @@
 <span id="_CPPv3N12HASerializer24calculateDataTopicLengthEPKcPK19__FlashStringHelper"></span><span id="_CPPv2N12HASerializer24calculateDataTopicLengthEPKcPK19__FlashStringHelper"></span><span id="HASerializer::calculateDataTopicLength__cCP.__FlashStringHelperCP"></span><span class="target" id="class_h_a_serializer_1ac3d03dd0b3a3c75197e9ec33f94d01b1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calculateDataTopicLength</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">objectId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer24calculateDataTopicLengthEPKcPK19__FlashStringHelper" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Calculates the size of the given data topic for the given objectId. The data topic has structure as follows: <code class="docutils literal notranslate"><span class="pre">[data</span> <span class="pre">prefix]/[device</span> <span class="pre">ID]_[objectId]/[topic]</span></code></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>objectId</strong> – The unique ID of a device type that’s going to publish the data. </p></li>
 <li><p><strong>topic</strong> – The topic name (progmem string). </p></li>
@@ -378,7 +379,7 @@
 <span id="_CPPv3N12HASerializer17generateDataTopicEPcPKcPK19__FlashStringHelper"></span><span id="_CPPv2N12HASerializer17generateDataTopicEPcPKcPK19__FlashStringHelper"></span><span id="HASerializer::generateDataTopic__cP.cCP.__FlashStringHelperCP"></span><span class="target" id="class_h_a_serializer_1aa72c3347ff7a056d4c002984103d129a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateDataTopic</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">output</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">objectId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer17generateDataTopicEPcPKcPK19__FlashStringHelper" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Generates the data topic for the given object ID. The topic will be stored in the <code class="docutils literal notranslate"><span class="pre">output</span></code> variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>output</strong> – Buffer where the topic will be written. </p></li>
 <li><p><strong>objectId</strong> – The unique ID of a device type that’s going to publish the data. </p></li>
@@ -393,7 +394,7 @@
 <span id="_CPPv3N12HASerializer17compareDataTopicsEPKcPKcPK19__FlashStringHelper"></span><span id="_CPPv2N12HASerializer17compareDataTopicsEPKcPKcPK19__FlashStringHelper"></span><span id="HASerializer::compareDataTopics__cCP.cCP.__FlashStringHelperCP"></span><span class="target" id="class_h_a_serializer_1a15c009b743edf4aa7cd1db63210b5ffc"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compareDataTopics</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">actualTopic</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">objectId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">__FlashStringHelper</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">topic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12HASerializer17compareDataTopicsEPKcPKcPK19__FlashStringHelper" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Checks whether the given topic matches the data topic that can be generated using the given objectId and topicP. This method can be used to check if the received message matches some data topic.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>actualTopic</strong> – The actual topic to compare. </p></li>
 <li><p><strong>objectId</strong> – The unique ID of a device type that may be the owner of the topic. </p></li>
@@ -517,7 +518,7 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N12HASerializer15SerializerEntry7subtypeE">
 <span id="_CPPv3N12HASerializer15SerializerEntry7subtypeE"></span><span id="_CPPv2N12HASerializer15SerializerEntry7subtypeE"></span><span id="HASerializer::SerializerEntry::subtype__uint8_t"></span><span class="target" id="struct_h_a_serializer_1_1_serializer_entry_1a1db4acee885aa141f3d6c6c5561c2e54"></span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">subtype</span></span></span><a class="headerlink" href="#_CPPv4N12HASerializer15SerializerEntry7subtypeE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Subtype of the entry. It can be <code class="docutils literal notranslate"><span class="pre">FlagType</span></code>, <code class="docutils literal notranslate"><span class="pre">PropertyValueType</span></code> or <code class="docutils literal notranslate"><span class="pre">TopicType</span></code>. </p>
+<dd><p>Subtype of the entry. It can be <code class="docutils literal notranslate"><a class="reference internal" href="#class_h_a_serializer_1af48ac87d6107bdf5682c2f847fcc1c20"><span class="std std-ref"><span class="pre">FlagType</span></span></a></code>, <code class="docutils literal notranslate"><a class="reference internal" href="#class_h_a_serializer_1a35cb1cb5fec45dd46c6fad9232d5199d"><span class="std std-ref"><span class="pre">PropertyValueType</span></span></a></code> or <code class="docutils literal notranslate"><span class="pre">TopicType</span></code>. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -554,7 +555,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>Device types (entities) - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/custom.js"></script>
 
@@ -148,16 +149,16 @@
           <div class="content" role="main" v-pre>
             
   <section id="device-types-entities">
-<h1>Device types (entities)<a class="headerlink" href="#device-types-entities" title="Permalink to this headline">¶</a></h1>
+<h1>Device types (entities)<a class="headerlink" href="#device-types-entities" title="Permalink to this heading">¶</a></h1>
 <p>Device type represents a single entity within the Home Assistant panel, which could be a sensor, lock, camera, or any other item listed in the table below.</p>
 <p>Your physical device, such as an ESP-01 board, can have multiple device types assigned to it.
 These types will then appear as child entities in the Home Assistant panel.</p>
 <section id="identifiers">
-<h2>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h2>
+<h2>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this heading">¶</a></h2>
 <p>Home Assistant utilizes three distinct identifiers, which might initially appear confusing.
 Grasping the purpose of each is crucial for a clear understanding of the library’s API.</p>
 <section id="entity-id">
-<h3>Entity ID<a class="headerlink" href="#entity-id" title="Permalink to this headline">¶</a></h3>
+<h3>Entity ID<a class="headerlink" href="#entity-id" title="Permalink to this heading">¶</a></h3>
 <p>Home Assistant automatically generates an entity ID for each device type registered by your device.
 This ID is primarily utilized by dashboards and automations within Home Assistant.</p>
 <p>When the entity is discovered by Home Assistant for the first time, the name field is automatically employed to generate the entity ID.
@@ -165,7 +166,7 @@ Once registered, you can modify it to any desired value using the Home Assistant
 <p>Home Assistant internally relies on the unique ID, so changing the entity ID or name in the Home Assistant UI does not break the integration between your device and Home Assistant.</p>
 </section>
 <section id="object-id">
-<h3>Object ID<a class="headerlink" href="#object-id" title="Permalink to this headline">¶</a></h3>
+<h3>Object ID<a class="headerlink" href="#object-id" title="Permalink to this heading">¶</a></h3>
 <p>The object ID is an optional identifier that you can assign to the device type.
 Its sole purpose is for generating the entity ID described above.</p>
 <p>By default, Home Assistant generates the entity ID based on the entity’s name.
@@ -173,7 +174,7 @@ However, when the object ID is provided, Home Assistant uses it to generate the 
 <p>Consequently, you can use the entity’s name as a user-friendly label and the object ID as an internal identifier.</p>
 </section>
 <section id="unique-id">
-<h3>Unique ID<a class="headerlink" href="#unique-id" title="Permalink to this headline">¶</a></h3>
+<h3>Unique ID<a class="headerlink" href="#unique-id" title="Permalink to this heading">¶</a></h3>
 <p>The unique ID serves as an internal identifier for the entity within the Home Assistant instance.
 Once the entity with a specific unique ID is created, it cannot be altered, as this identifier is not accessible through the user interface.</p>
 <p>Home Assistant utilizes this identifier internally to store the parameters of the entity in the database.
@@ -185,103 +186,103 @@ To address this issue, you can enable the extended unique ID feature in the HADe
 This feature incorporates the device’s unique ID as a prefix for the device type’s ID.</p>
 <div class="literal-block-wrapper docutils container" id="id1">
 <div class="code-block-caption"><span class="caption-text">Default behavior</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span>
 
-<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span>
 
-<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w"></span>
+<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
 <span class="n">HADevice</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">mac</span><span class="p">));</span><span class="w"> </span><span class="c1">// the unique ID of the device will be 0010fa6e384a</span>
-<span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">);</span><span class="w"></span>
+<span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">);</span>
 
 <span class="c1">// &quot;myValve&quot; is unique ID of the sensor. You should define your own ID.</span>
-<span class="n">HASensor</span><span class="w"> </span><span class="nf">valve</span><span class="p">(</span><span class="s">&quot;myValve&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">HASensor</span><span class="w"> </span><span class="n">valve</span><span class="p">(</span><span class="s">&quot;myValve&quot;</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
 
-<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setIcon</span><span class="p">(</span><span class="s">&quot;mdi:home&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Water valve&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setIcon</span><span class="p">(</span><span class="s">&quot;mdi:home&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Water valve&quot;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// the unique ID of the valve in HA will be &quot;myValve&quot;</span>
 
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="literal-block-wrapper docutils container" id="id2">
 <div class="code-block-caption"><span class="caption-text">Extended unique IDs</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span>
 
-<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span>
 
-<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w"></span>
+<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
 <span class="n">HADevice</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">mac</span><span class="p">));</span><span class="w"> </span><span class="c1">// the unique ID of the device will be 0010fa6e384a</span>
-<span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">);</span><span class="w"></span>
+<span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">);</span>
 
 <span class="c1">// &quot;myValve&quot; is unique ID of the sensor. You should define your own ID.</span>
-<span class="n">HASensor</span><span class="w"> </span><span class="nf">valve</span><span class="p">(</span><span class="s">&quot;myValve&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">HASensor</span><span class="w"> </span><span class="n">valve</span><span class="p">(</span><span class="s">&quot;myValve&quot;</span><span class="p">);</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
 
 <span class="w">    </span><span class="n">device</span><span class="p">.</span><span class="n">enableExtendedUniqueIds</span><span class="p">();</span><span class="w"> </span><span class="c1">// &lt;------------ enables extended unique IDs</span>
-<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setIcon</span><span class="p">(</span><span class="s">&quot;mdi:home&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Water valve&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setIcon</span><span class="p">(</span><span class="s">&quot;mdi:home&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">valve</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;Water valve&quot;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// the unique ID of the valve in HA will be &quot;0010fa6e384a_myValve&quot;</span>
 
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </section>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading">¶</a></h2>
 <p>Registering a new device type involves utilizing a certain amount of flash and RAM memory.
 On less powerful units, such as the Arduino Uno, you may rapidly reach the resource limit.
 Therefore, it is advisable to keep the device simple to avoid hitting the resource limit, which could lead to random reboots of the device.</p>
 <p>By default, devices utilizing ATmega328P or ATmega168 processors are limited to a maximum of 6 device types, while other platforms can support up to 24 device types.
 You can increase the limit using the <a class="reference internal" href="../api/core/ha-mqtt.html"><span class="doc">HAMqtt</span></a> class constructor as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span>
 
-<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span><span class="w"></span>
-<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w"></span>
-<span class="n">HADevice</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">mac</span><span class="p">));</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span>
+<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
+<span class="n">HADevice</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">mac</span><span class="p">));</span>
 <span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span><span class="w"> </span><span class="c1">// &lt;------------ 40 is a new limit of device types</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Ethernet</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">mac</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// your setup logic goes here</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">Ethernet</span><span class="p">.</span><span class="n">maintain</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">mqtt</span><span class="p">.</span><span class="n">loop</span><span class="p">();</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Ethernet</span><span class="p">.</span><span class="n">maintain</span><span class="p">();</span>
+<span class="w">    </span><span class="n">mqtt</span><span class="p">.</span><span class="n">loop</span><span class="p">();</span>
 
 <span class="w">    </span><span class="c1">// your loop logic goes here</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>Please note that this limit cannot be changed at runtime.</p>
 </section>
 <section id="supported-device-types">
-<h2>Supported device types<a class="headerlink" href="#supported-device-types" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-given supported-device-types-table docutils align-default">
+<h2>Supported device types<a class="headerlink" href="#supported-device-types" title="Permalink to this heading">¶</a></h2>
+<table class="supported-device-types-table docutils align-default">
 <colgroup>
 <col style="width: 25%" />
 <col style="width: 15%" />
@@ -428,7 +429,7 @@ You can increase the limit using the <a class="reference internal" href="../api/
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

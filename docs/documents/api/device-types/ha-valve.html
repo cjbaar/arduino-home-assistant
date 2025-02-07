@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+      <title>HAValve class - ArduinoHA</title>
+    
+          <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../../../_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/custom.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../../../_static/theme-vendors.js"></script> -->
+      <script src="../../../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../../../genindex.html" />
+  <link rel="search" title="Search" href="../../../search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../../../index.html" class="home-link">
+    
+      <span class="site-name">ArduinoHA</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/dawidchyrzynski/arduino-home-assistant"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/dawidchyrzynski/arduino-home-assistant"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../../../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started/index.html">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/prerequisites.html">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/compatible-hardware.html">Compatible Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../getting-started/examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../library/index.html">Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../library/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/device-configuration.html">Device configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/availability-reporting.html">Availability reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/connection-params.html">Connection parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/discovery.html">Discovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/device-types.html">Device types (entities)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/mqtt-security.html">MQTT security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/mqtt-advanced.html">MQTT advanced features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../library/compiler-macros.html">Compiler macros</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../core/index.html">Core API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html">Device types API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils/index.html">Utils API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/sponsors/dawidchyrzynski">Sponsor</a></li>
+</ul>
+
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+    
+    <li>HAValve class</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="havalve-class">
+<h1>HAValve class<a class="headerlink" href="#havalve-class" title="Permalink to this heading">¶</a></h1>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv47HAValve">
+<span id="_CPPv37HAValve"></span><span id="_CPPv27HAValve"></span><span id="HAValve"></span><span class="target" id="class_h_a_valve"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HAValve</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv47HAValve" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><a class="reference internal" href="#class_h_a_valve"><span class="std std-ref">HAValve</span></a> allows to control a valve (such as water or gas).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can find more information about this entity in the Home Assistant documentation: <a class="reference external" href="https://www.home-assistant.io/integrations/valve.mqtt/">https://www.home-assistant.io/integrations/valve.mqtt/</a> </p>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve10ValveStateE">
+<span id="_CPPv3N7HAValve10ValveStateE"></span><span id="_CPPv2N7HAValve10ValveStateE"></span><span class="target" id="class_h_a_valve_1a7ffe0ab189f85a8b44c9bb90cf97c28d"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveState</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve10ValveStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve10ValveState12StateUnknownE">
+<span id="_CPPv3N7HAValve10ValveState12StateUnknownE"></span><span id="_CPPv2N7HAValve10ValveState12StateUnknownE"></span><span class="target" id="class_h_a_valve_1a7ffe0ab189f85a8b44c9bb90cf97c28da317f4841e364a4edb4a8d8d2016576fe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StateUnknown</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve10ValveState12StateUnknownE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve10ValveState11StateClosedE">
+<span id="_CPPv3N7HAValve10ValveState11StateClosedE"></span><span id="_CPPv2N7HAValve10ValveState11StateClosedE"></span><span class="target" id="class_h_a_valve_1a7ffe0ab189f85a8b44c9bb90cf97c28da9a9b2e20d21b1c76528fd70a5271472e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StateClosed</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve10ValveState11StateClosedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve10ValveState12StateClosingE">
+<span id="_CPPv3N7HAValve10ValveState12StateClosingE"></span><span id="_CPPv2N7HAValve10ValveState12StateClosingE"></span><span class="target" id="class_h_a_valve_1a7ffe0ab189f85a8b44c9bb90cf97c28dabc6f9b0325def009452f6948b29ec49e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StateClosing</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve10ValveState12StateClosingE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve10ValveState9StateOpenE">
+<span id="_CPPv3N7HAValve10ValveState9StateOpenE"></span><span id="_CPPv2N7HAValve10ValveState9StateOpenE"></span><span class="target" id="class_h_a_valve_1a7ffe0ab189f85a8b44c9bb90cf97c28da726790cce1634922674ac163386e81bb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StateOpen</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve10ValveState9StateOpenE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve10ValveState12StateOpeningE">
+<span id="_CPPv3N7HAValve10ValveState12StateOpeningE"></span><span id="_CPPv2N7HAValve10ValveState12StateOpeningE"></span><span class="target" id="class_h_a_valve_1a7ffe0ab189f85a8b44c9bb90cf97c28da22a65e3bbf6378951af7bc7563fb9a73"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StateOpening</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve10ValveState12StateOpeningE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve12ValveCommandE">
+<span id="_CPPv3N7HAValve12ValveCommandE"></span><span id="_CPPv2N7HAValve12ValveCommandE"></span><span class="target" id="class_h_a_valve_1a470770d5a4a3cfcd176737e5d52c3855"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValveCommand</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve12ValveCommandE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve12ValveCommand11CommandOpenE">
+<span id="_CPPv3N7HAValve12ValveCommand11CommandOpenE"></span><span id="_CPPv2N7HAValve12ValveCommand11CommandOpenE"></span><span class="target" id="class_h_a_valve_1a470770d5a4a3cfcd176737e5d52c3855aec8f7bca92fbb80645e0bef4dfac9056"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CommandOpen</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve12ValveCommand11CommandOpenE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve12ValveCommand12CommandCloseE">
+<span id="_CPPv3N7HAValve12ValveCommand12CommandCloseE"></span><span id="_CPPv2N7HAValve12ValveCommand12CommandCloseE"></span><span class="target" id="class_h_a_valve_1a470770d5a4a3cfcd176737e5d52c3855a4d6555d84e87372596a7e57572e1555c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CommandClose</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve12ValveCommand12CommandCloseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve12ValveCommand11CommandStopE">
+<span id="_CPPv3N7HAValve12ValveCommand11CommandStopE"></span><span id="_CPPv2N7HAValve12ValveCommand11CommandStopE"></span><span class="target" id="class_h_a_valve_1a470770d5a4a3cfcd176737e5d52c3855a70658d14f6d2250531b389e6046997a7"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CommandStop</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve12ValveCommand11CommandStopE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve8FeaturesE">
+<span id="_CPPv3N7HAValve8FeaturesE"></span><span id="_CPPv2N7HAValve8FeaturesE"></span><span class="target" id="class_h_a_valve_1a6d9af6efd0427996ce12f37b019240f2"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Features</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve8FeaturesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve8Features15DefaultFeaturesE">
+<span id="_CPPv3N7HAValve8Features15DefaultFeaturesE"></span><span id="_CPPv2N7HAValve8Features15DefaultFeaturesE"></span><span class="target" id="class_h_a_valve_1a6d9af6efd0427996ce12f37b019240f2a21cfb2d0175122f0c7d5dc6fa2d03f19"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DefaultFeatures</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve8Features15DefaultFeaturesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve8Features15PositionFeatureE">
+<span id="_CPPv3N7HAValve8Features15PositionFeatureE"></span><span id="_CPPv2N7HAValve8Features15PositionFeatureE"></span><span class="target" id="class_h_a_valve_1a6d9af6efd0427996ce12f37b019240f2abf3a9f317f505481d103da5e58b2cd26"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PositionFeature</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve8Features15PositionFeatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve8Features11StopFeatureE">
+<span id="_CPPv3N7HAValve8Features11StopFeatureE"></span><span id="_CPPv2N7HAValve8Features11StopFeatureE"></span><span class="target" id="class_h_a_valve_1a6d9af6efd0427996ce12f37b019240f2a5259f5635e4f06c3f527c581d23f32b3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StopFeature</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve8Features11StopFeatureE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve16StatePublishTypeE">
+<span id="_CPPv3N7HAValve16StatePublishTypeE"></span><span id="_CPPv2N7HAValve16StatePublishTypeE"></span><span class="target" id="class_h_a_valve_1adc835863456d9d89325a5ea9446dc0fb"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StatePublishType</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve16StatePublishTypeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve16StatePublishType18StatePublishStringE">
+<span id="_CPPv3N7HAValve16StatePublishType18StatePublishStringE"></span><span id="_CPPv2N7HAValve16StatePublishType18StatePublishStringE"></span><span class="target" id="class_h_a_valve_1adc835863456d9d89325a5ea9446dc0fba07d4c290cac23fe641bb6bd53ebf3b2d"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StatePublishString</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve16StatePublishType18StatePublishStringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve16StatePublishType19StatePublishNumericE">
+<span id="_CPPv3N7HAValve16StatePublishType19StatePublishNumericE"></span><span id="_CPPv2N7HAValve16StatePublishType19StatePublishNumericE"></span><span class="target" id="class_h_a_valve_1adc835863456d9d89325a5ea9446dc0fba745ccd9e05ea9099e4422a229d12ebfe"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StatePublishNumeric</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve16StatePublishType19StatePublishNumericE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve16StatePublishType16StatePublishJsonE">
+<span id="_CPPv3N7HAValve16StatePublishType16StatePublishJsonE"></span><span id="_CPPv2N7HAValve16StatePublishType16StatePublishJsonE"></span><span class="target" id="class_h_a_valve_1adc835863456d9d89325a5ea9446dc0fba761b52b34a24843506234b1f321c1e8b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StatePublishJson</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve16StatePublishType16StatePublishJsonE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve7HAValveEPKcK8uint16_t">
+<span id="_CPPv3N7HAValve7HAValveEPKcK8uint16_t"></span><span id="_CPPv2N7HAValve7HAValveEPKcK8uint16_t"></span><span id="HAValve::HAValve__cCP.uint16_tC"></span><span class="target" id="class_h_a_valve_1a58b4abde6c29c012c0da5f0563516d68"></span><span class="sig-name descname"><span class="n"><span class="pre">HAValve</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">features</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve8Features15DefaultFeaturesE" title="HAValve::DefaultFeatures"><span class="n"><span class="pre">DefaultFeatures</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve7HAValveEPKcK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uniqueId</strong> – The unique ID of the valve. It needs to be unique in a scope of your device. </p></li>
+<li><p><strong>features</strong> – Features that should be enabled for the fan. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve8setStateEK10ValveStateKb">
+<span id="_CPPv3N7HAValve8setStateEK10ValveStateKb"></span><span id="_CPPv2N7HAValve8setStateEK10ValveStateKb"></span><span id="HAValve::setState__ValveStateC.bC"></span><span class="target" id="class_h_a_valve_1abb9d3e88889fca32d99b3fa2a744ad1f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve10ValveStateE" title="HAValve::ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve8setStateEK10ValveStateKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Changes state of the valve and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> – New state of the valve. </p></li>
+<li><p><strong>force</strong> – Forces to update state without comparing it to previous known state. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns true if MQTT message has been published successfully. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve11setPositionEK7int16_tKb">
+<span id="_CPPv3N7HAValve11setPositionEK7int16_tKb"></span><span id="_CPPv2N7HAValve11setPositionEK7int16_tKb"></span><span id="HAValve::setPosition__int16_tC.bC"></span><span class="target" id="class_h_a_valve_1a0a869b5d1c87a9017f0e80f441b98105"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve11setPositionEK7int16_tKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Changes the position of the valve and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> – The new position of the valve (0-100). </p></li>
+<li><p><strong>force</strong> – Forces to update the state without comparing it to a previous known state. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve20setStateWithPositionEK10ValveStateK7int16_tKb">
+<span id="_CPPv3N7HAValve20setStateWithPositionEK10ValveStateK7int16_tKb"></span><span id="_CPPv2N7HAValve20setStateWithPositionEK10ValveStateK7int16_tKb"></span><span id="HAValve::setStateWithPosition__ValveStateC.int16_tC.bC"></span><span class="target" id="class_h_a_valve_1a0e90382369f31f7fca79be42bc5df8f5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setStateWithPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve10ValveStateE" title="HAValve::ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve20setStateWithPositionEK10ValveStateK7int16_tKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Changes both the state and position of the valve and publishes MQTT message. Please note that if a both values are the same as previous ones, the MQTT message won’t be published.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> – New state of the valve. </p></li>
+<li><p><strong>position</strong> – The new position of the valve (0-100). </p></li>
+<li><p><strong>force</strong> – Forces to update the state without comparing it to a previous known state. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15setCurrentStateEK10ValveState">
+<span id="_CPPv3N7HAValve15setCurrentStateEK10ValveState"></span><span id="_CPPv2N7HAValve15setCurrentStateEK10ValveState"></span><span id="HAValve::setCurrentState__ValveStateC"></span><span class="target" id="class_h_a_valve_1aeaa02b4a9a27fd482fa28aa430c89081"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve10ValveStateE" title="HAValve::ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve15setCurrentStateEK10ValveState" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the current state of the valve without publishing it to Home Assistant. This method may be useful if you want to change the state before the connection with the MQTT broker is acquired.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state</strong> – The new state of the valve. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7HAValve15getCurrentStateEv">
+<span id="_CPPv3NK7HAValve15getCurrentStateEv"></span><span id="_CPPv2NK7HAValve15getCurrentStateEv"></span><span id="HAValve::getCurrentStateC"></span><span class="target" id="class_h_a_valve_1a23861826412ad947315533444268a308"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve10ValveStateE" title="HAValve::ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCurrentState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7HAValve15getCurrentStateEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns last known state of the valve. By default the state is set to ValveState::StateUnknown </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve18setCurrentPositionEK7int16_t">
+<span id="_CPPv3N7HAValve18setCurrentPositionEK7int16_t"></span><span id="_CPPv2N7HAValve18setCurrentPositionEK7int16_t"></span><span id="HAValve::setCurrentPosition__int16_tC"></span><span class="target" id="class_h_a_valve_1a1ba015b81e38a143e5a32d95a759675a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentPosition</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve18setCurrentPositionEK7int16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets the current position of the valve without pushing the value to Home Assistant. This method may be useful if you want to change the position before the connection with the MQTT broker is acquired.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>position</strong> – The new position of the valve (0-100). </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7HAValve18getCurrentPositionEv">
+<span id="_CPPv3NK7HAValve18getCurrentPositionEv"></span><span id="_CPPv2NK7HAValve18getCurrentPositionEv"></span><span id="HAValve::getCurrentPositionC"></span><span class="target" id="class_h_a_valve_1ab4707d6a893f299fd02dab29413930eb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCurrentPosition</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7HAValve18getCurrentPositionEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Returns the last known position of the valve. By default position is set to HAValve::DefaultPosition </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15setPositionOpenEK8uint16_t">
+<span id="_CPPv3N7HAValve15setPositionOpenEK8uint16_t"></span><span id="_CPPv2N7HAValve15setPositionOpenEK8uint16_t"></span><span id="HAValve::setPositionOpen__uint16_tC"></span><span class="target" id="class_h_a_valve_1a2f0f5623daf454181c1550dcf2d73b0d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPositionOpen</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve15setPositionOpenEK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set/get the value of the open position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The setp value. By default it’s <code class="docutils literal notranslate"><span class="pre">100</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15getPositionOpenEv">
+<span id="_CPPv3N7HAValve15getPositionOpenEv"></span><span id="_CPPv2N7HAValve15getPositionOpenEv"></span><span id="HAValve::getPositionOpen"></span><span class="target" id="class_h_a_valve_1ad61256965e7a8b4887805aeee6ec0985"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionOpen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve15getPositionOpenEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve17setPositionClosedEK8uint16_t">
+<span id="_CPPv3N7HAValve17setPositionClosedEK8uint16_t"></span><span id="_CPPv2N7HAValve17setPositionClosedEK8uint16_t"></span><span id="HAValve::setPositionClosed__uint16_tC"></span><span class="target" id="class_h_a_valve_1a00cff0994225354201eb39f31dda66ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPositionClosed</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve17setPositionClosedEK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set/get the value of the closed position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – The setp value. By default it’s <code class="docutils literal notranslate"><span class="pre">0</span></code>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve17getPositionClosedEv">
+<span id="_CPPv3N7HAValve17getPositionClosedEv"></span><span id="_CPPv2N7HAValve17getPositionClosedEv"></span><span id="HAValve::getPositionClosed"></span><span class="target" id="class_h_a_valve_1a224f135f2ffc41c705e81b7a0b1bb450"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPositionClosed</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve17getPositionClosedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve14setDeviceClassEPKc">
+<span id="_CPPv3N7HAValve14setDeviceClassEPKc"></span><span id="_CPPv2N7HAValve14setDeviceClassEPKc"></span><span id="HAValve::setDeviceClass__cCP"></span><span class="target" id="class_h_a_valve_1ab06d134f5c59b7cc22db69e53e70f3c8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDeviceClass</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">deviceClass</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve14setDeviceClassEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets class of the device. You can find list of available values here: <a class="reference external" href="https://www.home-assistant.io/integrations/valve/">https://www.home-assistant.io/integrations/valve/</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>deviceClass</strong> – The class name. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve7setIconEPKc">
+<span id="_CPPv3N7HAValve7setIconEPKc"></span><span id="_CPPv2N7HAValve7setIconEPKc"></span><span id="HAValve::setIcon__cCP"></span><span class="target" id="class_h_a_valve_1aaf155f2c74b71362fa3d14cbd6d660fc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets icon of the valve. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>icon</strong> – The icon name. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve9setRetainEKb">
+<span id="_CPPv3N7HAValve9setRetainEKb"></span><span id="_CPPv2N7HAValve9setRetainEKb"></span><span id="HAValve::setRetain__bC"></span><span class="target" id="class_h_a_valve_1a04fad2de8b875333a17046a367835326"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRetain</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">retain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve9setRetainEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets retain flag for the valve’s command. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the command produced by Home Assistant will be retained.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>retain</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve13setOptimisticEKb">
+<span id="_CPPv3N7HAValve13setOptimisticEKb"></span><span id="_CPPv2N7HAValve13setOptimisticEKb"></span><span id="HAValve::setOptimistic__bC"></span><span class="target" id="class_h_a_valve_1a95c49893d5ddc28d040d2fba5b2e438d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOptimistic</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">optimistic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve13setOptimisticEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sets optimistic flag for the valve state. In this mode the valve state doesn’t need to be reported back to the HA panel when a command is received. By default the optimistic mode is disabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>optimistic</strong> – The optimistic mode (<code class="docutils literal notranslate"><span class="pre">true</span></code> - enabled, <code class="docutils literal notranslate"><span class="pre">false</span></code> - disabled). </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve9onCommandEPFv7int16_tP7HAValveE">
+<span id="_CPPv3N7HAValve9onCommandEPFv7int16_tP7HAValveE"></span><span id="_CPPv2N7HAValve9onCommandEPFv7int16_tP7HAValveE"></span><span class="target" id="class_h_a_valve_1ac5753e3b4e812ea6d9f0fff22f34e630"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onCommand</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">callback</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n"><span class="pre">cmd</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv47HAValve" title="HAValve"><span class="n"><span class="pre">HAValve</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sender</span></span><span class="p"><span class="pre">)</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve9onCommandEPFv7int16_tP7HAValveE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Registers callback that will be called each time the command from HA is received. Please note that it’s not possible to register multiple callbacks for the same valve.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>callback</strong> – </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15DefaultPositionE">
+<span id="_CPPv3N7HAValve15DefaultPositionE"></span><span id="_CPPv2N7HAValve15DefaultPositionE"></span><span id="HAValve::DefaultPosition__int16_tC"></span><span class="target" id="class_h_a_valve_1a24c2713edb754579d7f4427d667353bd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DefaultPosition</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">32768</span></span><a class="headerlink" href="#_CPPv4N7HAValve15DefaultPositionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-functions">Protected Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15buildSerializerEv">
+<span id="_CPPv3N7HAValve15buildSerializerEv"></span><span id="_CPPv2N7HAValve15buildSerializerEv"></span><span id="HAValve::buildSerializer"></span><span class="target" id="class_h_a_valve_1a78b2c779c4ce90ffdfaa3f3308f73fcf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">buildSerializer</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7HAValve15buildSerializerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15onMqttConnectedEv">
+<span id="_CPPv3N7HAValve15onMqttConnectedEv"></span><span id="_CPPv2N7HAValve15onMqttConnectedEv"></span><span id="HAValve::onMqttConnected"></span><span class="target" id="class_h_a_valve_1ad8109931ac99c4a235b84c2efb60d3ae"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onMqttConnected</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7HAValve15onMqttConnectedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve13onMqttMessageEPKcPK7uint8_tK8uint16_t">
+<span id="_CPPv3N7HAValve13onMqttMessageEPKcPK7uint8_tK8uint16_t"></span><span id="_CPPv2N7HAValve13onMqttMessageEPKcPK7uint8_tK8uint16_t"></span><span id="HAValve::onMqttMessage__cCP.uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_valve_1a98a4f79c5f5ef1ea7fc9563a4909edd6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">onMqttMessage</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">topic</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">payload</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7HAValve13onMqttMessageEPKcPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve12publishStateEK16StatePublishTypeK10ValveStateK7int16_t">
+<span id="_CPPv3N7HAValve12publishStateEK16StatePublishTypeK10ValveStateK7int16_t"></span><span id="_CPPv2N7HAValve12publishStateEK16StatePublishTypeK10ValveStateK7int16_t"></span><span id="HAValve::publishState__StatePublishTypeC.ValveStateC.int16_tC"></span><span class="target" id="class_h_a_valve_1ae63a2d1d46e1806165545a329bb50f67"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve16StatePublishTypeE" title="HAValve::StatePublishType"><span class="n"><span class="pre">StatePublishType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HAValve10ValveStateE" title="HAValve::ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">position</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve12publishStateEK16StatePublishTypeK10ValveStateK7int16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Publishes the MQTT message with the given state as a string. For valves that do not use the “reports_position” feature, will report either numeric for position or JSON for both</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – The publish type </p></li>
+<li><p><strong>state</strong> – The state to publish. </p></li>
+<li><p><strong>position</strong> – The position to publish. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve13handleCommandEPK7uint8_tK8uint16_t">
+<span id="_CPPv3N7HAValve13handleCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N7HAValve13handleCommandEPK7uint8_tK8uint16_t"></span><span id="HAValve::handleCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_valve_1a75a4750ee41e53c7996c4d614faf19ba"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HAValve13handleCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Parses the given command and executes the valve’s callback with proper enum’s property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cmd</strong> – The data of the command. </p></li>
+<li><p><strong>length</strong> – Length of the command. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve9_featuresE">
+<span id="_CPPv3N7HAValve9_featuresE"></span><span id="_CPPv2N7HAValve9_featuresE"></span><span id="HAValve::_features__uint8_tC"></span><span class="target" id="class_h_a_valve_1a5a51cfc914b4e6beefb4e81b63c12374"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_features</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve9_featuresE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Features enabled for the valve. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve13_currentStateE">
+<span id="_CPPv3N7HAValve13_currentStateE"></span><span id="_CPPv2N7HAValve13_currentStateE"></span><span id="HAValve::_currentState__ValveState"></span><span class="target" id="class_h_a_valve_1a42337f3aff51957b7a68a4b210a77832"></span><a class="reference internal" href="#_CPPv4N7HAValve10ValveStateE" title="HAValve::ValveState"><span class="n"><span class="pre">ValveState</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_currentState</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve13_currentStateE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The current state of the valve. By default it’s <code class="docutils literal notranslate"><span class="pre">HAValve::StateUnknown</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve16_currentPositionE">
+<span id="_CPPv3N7HAValve16_currentPositionE"></span><span id="_CPPv2N7HAValve16_currentPositionE"></span><span id="HAValve::_currentPosition__int16_t"></span><span class="target" id="class_h_a_valve_1aa0fad15407b55bc15346123c3116f6bd"></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_currentPosition</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve16_currentPositionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The current position of the valve. By default it’s <code class="docutils literal notranslate"><span class="pre">HAValve::DefaultPosition</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve13_positionOpenE">
+<span id="_CPPv3N7HAValve13_positionOpenE"></span><span id="_CPPv2N7HAValve13_positionOpenE"></span><span id="HAValve::_positionOpen__HANumeric"></span><span class="target" id="class_h_a_valve_1a78318305d13f7fb6b951d3308fcba0ee"></span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_positionOpen</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve13_positionOpenE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The defined close position. Defaults to 0. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve15_positionClosedE">
+<span id="_CPPv3N7HAValve15_positionClosedE"></span><span id="_CPPv2N7HAValve15_positionClosedE"></span><span id="HAValve::_positionClosed__HANumeric"></span><span class="target" id="class_h_a_valve_1a0a77c18ab350593603f17499dd97823a"></span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_positionClosed</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve15_positionClosedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The defined close position. Defaults to 100. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve6_classE">
+<span id="_CPPv3N7HAValve6_classE"></span><span id="_CPPv2N7HAValve6_classE"></span><span id="HAValve::_class__cCP"></span><span class="target" id="class_h_a_valve_1a4b07d8bff73a69c7bf3df7472556c6c0"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_class</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve6_classE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The device class. It can be nullptr. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve5_iconE">
+<span id="_CPPv3N7HAValve5_iconE"></span><span id="_CPPv2N7HAValve5_iconE"></span><span id="HAValve::_icon__cCP"></span><span class="target" id="class_h_a_valve_1a326801e16469a1c19d2748034af74e93"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_icon</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve5_iconE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The icon of the button. It can be nullptr. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve7_retainE">
+<span id="_CPPv3N7HAValve7_retainE"></span><span id="_CPPv2N7HAValve7_retainE"></span><span id="HAValve::_retain__b"></span><span class="target" id="class_h_a_valve_1ad1c52bf0c5d44f305ed4db148a9dc2a9"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_retain</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve7_retainE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The retain flag for the HA commands. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve11_optimisticE">
+<span id="_CPPv3N7HAValve11_optimisticE"></span><span id="_CPPv2N7HAValve11_optimisticE"></span><span id="HAValve::_optimistic__b"></span><span class="target" id="class_h_a_valve_1a45559c768a679e1f7a7334990cd535d2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">_optimistic</span></span></span><a class="headerlink" href="#_CPPv4N7HAValve11_optimisticE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The optimistic mode of the valve (<code class="docutils literal notranslate"><span class="pre">true</span></code> - enabled, <code class="docutils literal notranslate"><span class="pre">false</span></code> - disabled). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7HAValve16_commandCallbackE">
+<span id="_CPPv3N7HAValve16_commandCallbackE"></span><span id="_CPPv2N7HAValve16_commandCallbackE"></span><span class="target" id="class_h_a_valve_1a6ae8fa82d91c9d4700bae215d2f71401"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">_commandCallback</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="n"><span class="pre">int16_t</span></span><span class="w"> </span><span class="n"><span class="pre">cmd</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv47HAValve" title="HAValve"><span class="n"><span class="pre">HAValve</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">sender</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv4N7HAValve16_commandCallbackE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>The command callback that will be called when clicking the valve’s button in the HA panel. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Dawid Chyrzynski.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

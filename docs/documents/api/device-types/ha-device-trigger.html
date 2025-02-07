@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HADeviceTrigger class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="hadevicetrigger-class">
-<h1>HADeviceTrigger class<a class="headerlink" href="#hadevicetrigger-class" title="Permalink to this headline">¶</a></h1>
+<h1>HADeviceTrigger class<a class="headerlink" href="#hadevicetrigger-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv415HADeviceTrigger">
 <span id="_CPPv315HADeviceTrigger"></span><span id="_CPPv215HADeviceTrigger"></span><span id="HADeviceTrigger"></span><span class="target" id="class_h_a_device_trigger"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTrigger</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv415HADeviceTrigger" title="Permalink to this definition">¶</a><br /></dt>
@@ -263,7 +264,7 @@
 <span id="_CPPv3N15HADeviceTrigger15HADeviceTriggerEPKcPKc"></span><span id="_CPPv2N15HADeviceTrigger15HADeviceTriggerEPKcPKc"></span><span id="HADeviceTrigger::HADeviceTrigger__cCP.cCP"></span><span class="target" id="class_h_a_device_trigger_1a381ad9d7051b424050c9985c5fccf996"></span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTrigger</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">subtype</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTrigger15HADeviceTriggerEPKcPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates the device trigger with a custom type and subtype. For example, it can be <code class="docutils literal notranslate"><span class="pre">click</span></code> as the type and <code class="docutils literal notranslate"><span class="pre">btn0</span></code> as the subtype. Please note that combination of the type and subtype needs to be unique in a scope of your device.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> – String representation of the type. </p></li>
 <li><p><strong>subtype</strong> – String representation of the subtype. </p></li>
@@ -277,7 +278,7 @@
 <span id="_CPPv3N15HADeviceTrigger15HADeviceTriggerE11TriggerTypePKc"></span><span id="_CPPv2N15HADeviceTrigger15HADeviceTriggerE11TriggerTypePKc"></span><span id="HADeviceTrigger::HADeviceTrigger__TriggerType.cCP"></span><span class="target" id="class_h_a_device_trigger_1a87671ef60055147a9f592863dec26352"></span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTrigger</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15HADeviceTrigger11TriggerTypeE" title="HADeviceTrigger::TriggerType"><span class="n"><span class="pre">TriggerType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">subtype</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTrigger15HADeviceTriggerE11TriggerTypePKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates the device trigger with a built-in type and a custom subtype. For example, it can be <code class="docutils literal notranslate"><span class="pre">HADeviceTrigger::ButtonShortPressType</span></code> as the type and <code class="docutils literal notranslate"><span class="pre">btn0</span></code> as the subtype. Please note that combination of the type and subtype needs to be unique in a scope of your device.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> – Built-in type of the trigger. </p></li>
 <li><p><strong>subtype</strong> – String representation of the subtype. </p></li>
@@ -291,7 +292,7 @@
 <span id="_CPPv3N15HADeviceTrigger15HADeviceTriggerEPKc14TriggerSubtype"></span><span id="_CPPv2N15HADeviceTrigger15HADeviceTriggerEPKc14TriggerSubtype"></span><span id="HADeviceTrigger::HADeviceTrigger__cCP.TriggerSubtype"></span><span class="target" id="class_h_a_device_trigger_1a8a466d3acdea037af5ab9dd304b78a84"></span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTrigger</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">type</span></span>, <a class="reference internal" href="#_CPPv4N15HADeviceTrigger14TriggerSubtypeE" title="HADeviceTrigger::TriggerSubtype"><span class="n"><span class="pre">TriggerSubtype</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">subtype</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTrigger15HADeviceTriggerEPKc14TriggerSubtype" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates the device trigger with a custom type and a built-in subtype. For example, it can be <code class="docutils literal notranslate"><span class="pre">click</span></code> as the type and <code class="docutils literal notranslate"><span class="pre">HADeviceTrigger::Button1Subtype</span></code> as the subtype. Please note that combination of the type and subtype needs to be unique in a scope of your device.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> – String representation of the subtype. </p></li>
 <li><p><strong>subtype</strong> – Built-in subtype of the trigger. </p></li>
@@ -305,7 +306,7 @@
 <span id="_CPPv3N15HADeviceTrigger15HADeviceTriggerE11TriggerType14TriggerSubtype"></span><span id="_CPPv2N15HADeviceTrigger15HADeviceTriggerE11TriggerType14TriggerSubtype"></span><span id="HADeviceTrigger::HADeviceTrigger__TriggerType.TriggerSubtype"></span><span class="target" id="class_h_a_device_trigger_1a905404693ada525dd1d7bda17dbd4706"></span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTrigger</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15HADeviceTrigger11TriggerTypeE" title="HADeviceTrigger::TriggerType"><span class="n"><span class="pre">TriggerType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span>, <a class="reference internal" href="#_CPPv4N15HADeviceTrigger14TriggerSubtypeE" title="HADeviceTrigger::TriggerSubtype"><span class="n"><span class="pre">TriggerSubtype</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">subtype</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTrigger15HADeviceTriggerE11TriggerType14TriggerSubtype" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Creates the device trigger with a built-in type and built-in subtype. For example, it can be <code class="docutils literal notranslate"><span class="pre">HADeviceTrigger::ButtonShortPressType</span></code> as the type and <code class="docutils literal notranslate"><span class="pre">HADeviceTrigger::Button1Subtype</span></code> as the subtype. Please note that combination of the type and subtype needs to be unique in a scope of your device.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>type</strong> – Built-in type of the trigger. </p></li>
 <li><p><strong>subtype</strong> – Built-in subtype of the trigger. </p></li>
@@ -325,7 +326,7 @@
 <span id="_CPPv3N15HADeviceTrigger7triggerEv"></span><span id="_CPPv2N15HADeviceTrigger7triggerEv"></span><span id="HADeviceTrigger::trigger"></span><span class="target" id="class_h_a_device_trigger_1af5ccc2a8c7725822d5fff6be89432903"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">trigger</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTrigger7triggerEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes MQTT message with the trigger event. The published message is not retained.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -336,7 +337,7 @@
 <span id="_CPPv3NK15HADeviceTrigger7getTypeEv"></span><span id="_CPPv2NK15HADeviceTrigger7getTypeEv"></span><span id="HADeviceTrigger::getTypeC"></span><span class="target" id="class_h_a_device_trigger_1a41c0dfc7efb9afbeebda68200f1ab368"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getType</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15HADeviceTrigger7getTypeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns the type of the trigger. If the built-in type is used the returned value points to the flash memory. Use <code class="docutils literal notranslate"><a class="reference internal" href="#class_h_a_device_trigger_1a9c71bfeb19fca803eb2f1c9e2f0e9320"><span class="std std-ref"><span class="pre">HADeviceTrigger::isProgmemType</span></span></a></code> to verify if the returned value is the progmem pointer.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pointer to the type. </p>
 </dd>
 </dl>
@@ -353,7 +354,7 @@
 <span id="_CPPv3NK15HADeviceTrigger10getSubtypeEv"></span><span id="_CPPv2NK15HADeviceTrigger10getSubtypeEv"></span><span id="HADeviceTrigger::getSubtypeC"></span><span class="target" id="class_h_a_device_trigger_1ac7e88ab8a8c25414e7b424ade446f1bd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getSubtype</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15HADeviceTrigger10getSubtypeEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns the subtype of the trigger. If the built-in subtype is used the returned value points to the flash memory. Use <code class="docutils literal notranslate"><a class="reference internal" href="#class_h_a_device_trigger_1a590f7b3442517232be40ea28753b5439"><span class="std std-ref"><span class="pre">HADeviceTrigger::isProgmemSubtype</span></span></a></code> to verify if the returned value is the progmem pointer.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pointer to the subtype. </p>
 </dd>
 </dl>
@@ -398,10 +399,10 @@
 <span id="_CPPv3NK15HADeviceTrigger20determineProgmemTypeE11TriggerType"></span><span id="_CPPv2NK15HADeviceTrigger20determineProgmemTypeE11TriggerType"></span><span id="HADeviceTrigger::determineProgmemType__TriggerTypeC"></span><span class="target" id="class_h_a_device_trigger_1aa58fe524568ee959afa04136b297d752"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">determineProgmemType</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15HADeviceTrigger11TriggerTypeE" title="HADeviceTrigger::TriggerType"><span class="n"><span class="pre">TriggerType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15HADeviceTrigger20determineProgmemTypeE11TriggerType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns pointer to the flash memory that represents the given type.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>subtype</strong> – Built-in type enum’s value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Pointer to the flash memory if the given type is supported. For the unsupported type the nullptr is returned. </p>
 </dd>
 </dl>
@@ -412,10 +413,10 @@
 <span id="_CPPv3NK15HADeviceTrigger23determineProgmemSubtypeE14TriggerSubtype"></span><span id="_CPPv2NK15HADeviceTrigger23determineProgmemSubtypeE14TriggerSubtype"></span><span id="HADeviceTrigger::determineProgmemSubtype__TriggerSubtypeC"></span><span class="target" id="class_h_a_device_trigger_1a86973d5f7680f0b2c81746b603b9607a"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">determineProgmemSubtype</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15HADeviceTrigger14TriggerSubtypeE" title="HADeviceTrigger::TriggerSubtype"><span class="n"><span class="pre">TriggerSubtype</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">subtype</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK15HADeviceTrigger23determineProgmemSubtypeE14TriggerSubtype" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns pointer to the flash memory that represents the given subtype.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>subtype</strong> – Built-in subtype enum’s value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Pointer to the flash memory if the given subtype is supported. For the unsupported subtype the nullptr is returned. </p>
 </dd>
 </dl>
@@ -468,7 +469,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

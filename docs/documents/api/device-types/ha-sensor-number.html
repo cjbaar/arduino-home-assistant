@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HASensorNumber class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="hasensornumber-class">
-<h1>HASensorNumber class<a class="headerlink" href="#hasensornumber-class" title="Permalink to this headline">¶</a></h1>
+<h1>HASensorNumber class<a class="headerlink" href="#hasensornumber-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv414HASensorNumber">
 <span id="_CPPv314HASensorNumber"></span><span id="_CPPv214HASensorNumber"></span><span id="HASensorNumber"></span><span class="target" id="class_h_a_sensor_number"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HASensorNumber</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-sensor.html#_CPPv48HASensor" title="HASensor"><span class="n"><span class="pre">HASensor</span></span></a><a class="headerlink" href="#_CPPv414HASensorNumber" title="Permalink to this definition">¶</a><br /></dt>
@@ -165,7 +166,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N14HASensorNumber14HASensorNumberEPKcK15NumberPrecisionK8uint16_t">
 <span id="_CPPv3N14HASensorNumber14HASensorNumberEPKcK15NumberPrecisionK8uint16_t"></span><span id="_CPPv2N14HASensorNumber14HASensorNumberEPKcK15NumberPrecisionK8uint16_t"></span><span id="HASensorNumber::HASensorNumber__cCP.NumberPrecisionC.uint16_tC"></span><span class="target" id="class_h_a_sensor_number_1aee8b279589d82b660fb41c223a80053e"></span><span class="sig-name descname"><span class="n"><span class="pre">HASensorNumber</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">NumberPrecision</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">precision</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">PrecisionP0</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">features</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">DefaultFeatures</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14HASensorNumber14HASensorNumberEPKcK15NumberPrecisionK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uniqueId</strong> – The unique ID of the sensor. It needs to be unique in a scope of your device. </p></li>
 <li><p><strong>precision</strong> – Precision of the floating point number that will be displayed in the HA panel. </p></li>
@@ -180,13 +181,13 @@
 <span id="_CPPv3N14HASensorNumber8setValueERK9HANumericKb"></span><span id="_CPPv2N14HASensorNumber8setValueERK9HANumericKb"></span><span id="HASensorNumber::setValue__HANumericCR.bC"></span><span class="target" id="class_h_a_sensor_number_1a6c8a3a582a575d371c8a60efba43594b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14HASensorNumber8setValueERK9HANumericKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes value of the sensor and publish MQTT message. Please note that if a new value is the same as the previous one the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> – New value of the sensor. THe precision of the value needs to match precision of the sensor. </p></li>
 <li><p><strong>force</strong> – Forces to update the value without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -239,7 +240,7 @@
 <span id="_CPPv3N14HASensorNumber15setCurrentValueERK9HANumeric"></span><span id="_CPPv2N14HASensorNumber15setCurrentValueERK9HANumeric"></span><span id="HASensorNumber::setCurrentValue__HANumericCR"></span><span class="target" id="class_h_a_sensor_number_1a0cc7100ba72b728dab3e8c11c3b04ec4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14HASensorNumber15setCurrentValueERK9HANumeric" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the current value of the sensor without publishing it to Home Assistant. This method may be useful if you want to change the value before the connection with the MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>value</strong> – New value of the sensor. </p>
 </dd>
 </dl>
@@ -309,10 +310,10 @@
 <span id="_CPPv3N14HASensorNumber12publishValueERK9HANumeric"></span><span id="_CPPv2N14HASensorNumber12publishValueERK9HANumeric"></span><span id="HASensorNumber::publishValue__HANumericCR"></span><span class="target" id="class_h_a_sensor_number_1af623382a7591a694622890138f11891b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="../utils/ha-numeric.html#_CPPv49HANumeric" title="HANumeric"><span class="n"><span class="pre">HANumeric</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N14HASensorNumber12publishValueERK9HANumeric" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The value to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -353,7 +354,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

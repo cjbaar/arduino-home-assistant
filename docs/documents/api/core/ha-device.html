@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HADevice class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="hadevice-class">
-<h1>HADevice class<a class="headerlink" href="#hadevice-class" title="Permalink to this headline">¶</a></h1>
+<h1>HADevice class<a class="headerlink" href="#hadevice-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv48HADevice">
 <span id="_CPPv38HADevice"></span><span id="_CPPv28HADevice"></span><span id="HADevice"></span><span class="target" id="class_h_a_device"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HADevice</span></span></span><a class="headerlink" href="#_CPPv48HADevice" title="Permalink to this definition">¶</a><br /></dt>
@@ -172,7 +173,7 @@
 <span id="_CPPv3N8HADevice8HADeviceEPKc"></span><span id="_CPPv2N8HADevice8HADeviceEPKc"></span><span id="HADevice::HADevice__cCP"></span><span class="target" id="class_h_a_device_1a74583bbf58825f6110332a2b30365ad5"></span><span class="sig-name descname"><span class="n"><span class="pre">HADevice</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice8HADeviceEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Constructs <a class="reference internal" href="#class_h_a_device"><span class="std std-ref">HADevice</span></a> with the given unique ID (string). Keep the unique ID short to save the memory.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>uniqueId</strong> – String with the null terminator. </p>
 </dd>
 </dl>
@@ -183,7 +184,7 @@
 <span id="_CPPv3N8HADevice8HADeviceEPK4byteK8uint16_t"></span><span id="_CPPv2N8HADevice8HADeviceEPK4byteK8uint16_t"></span><span id="HADevice::HADevice__byteCP.uint16_tC"></span><span class="target" id="class_h_a_device_1a9b6c1f247492c3398a0709a579571f71"></span><span class="sig-name descname"><span class="n"><span class="pre">HADevice</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">byte</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice8HADeviceEPK4byteK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Constructs <a class="reference internal" href="#class_h_a_device"><span class="std std-ref">HADevice</span></a> using the given byte array as the unique ID. It works in the same way as <a class="reference internal" href="#class_h_a_device_1a8d10a57aa14007643ccdecd7c1a372a5"><span class="std std-ref">HADevice::setUniqueId</span></a> method.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uniqueId</strong> – Bytes array that’s going to be converted into the string. </p></li>
 <li><p><strong>length</strong> – Number of bytes in the array. </p></li>
@@ -249,7 +250,7 @@
 <p>The unique ID can be set only once (via constructor or using this method). </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uniqueId</strong> – Bytes array that’s going to be converted into the string. </p></li>
 <li><p><strong>length</strong> – Number of bytes in the array. </p></li>
@@ -263,7 +264,7 @@
 <span id="_CPPv3N8HADevice15setManufacturerEPKc"></span><span id="_CPPv2N8HADevice15setManufacturerEPKc"></span><span id="HADevice::setManufacturer__cCP"></span><span class="target" id="class_h_a_device_1aac0e57509fafeaa1fc4edaabfd1f8c00"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setManufacturer</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">manufacturer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice15setManufacturerEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the “manufacturer” property that’s going to be displayed in the Home Assistant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>manufacturer</strong> – Any string. Keep it short to save the memory. </p>
 </dd>
 </dl>
@@ -274,7 +275,7 @@
 <span id="_CPPv3N8HADevice8setModelEPKc"></span><span id="_CPPv2N8HADevice8setModelEPKc"></span><span id="HADevice::setModel__cCP"></span><span class="target" id="class_h_a_device_1ace75ab3fe59304ce44a956bff0f4145b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setModel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">model</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice8setModelEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the “model” property that’s going to be displayed in the Home Assistant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>model</strong> – Any string. Keep it short to save the memory. </p>
 </dd>
 </dl>
@@ -285,7 +286,7 @@
 <span id="_CPPv3N8HADevice7setNameEPKc"></span><span id="_CPPv2N8HADevice7setNameEPKc"></span><span id="HADevice::setName__cCP"></span><span class="target" id="class_h_a_device_1a439227a1e73175bb9f2177e39f0ac7ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setName</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice7setNameEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the “name” property that’s going to be displayed in the Home Assistant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>name</strong> – Any string. Keep it short to save the memory. </p>
 </dd>
 </dl>
@@ -296,7 +297,7 @@
 <span id="_CPPv3N8HADevice18setSoftwareVersionEPKc"></span><span id="_CPPv2N8HADevice18setSoftwareVersionEPKc"></span><span id="HADevice::setSoftwareVersion__cCP"></span><span class="target" id="class_h_a_device_1a935e9d844b8727e54873cd38b56d04ef"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSoftwareVersion</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">softwareVersion</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice18setSoftwareVersionEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the “software version” property that’s going to be displayed in the Home Assistant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>softwareVersion</strong> – Any string. Keep it short to save the memory. </p>
 </dd>
 </dl>
@@ -307,7 +308,7 @@
 <span id="_CPPv3N8HADevice19setConfigurationUrlEPKc"></span><span id="_CPPv2N8HADevice19setConfigurationUrlEPKc"></span><span id="HADevice::setConfigurationUrl__cCP"></span><span class="target" id="class_h_a_device_1a70cd536783b2b994e9d903d6daa30f44"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setConfigurationUrl</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">url</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice19setConfigurationUrlEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the “configuration URL” property that’s going to be used by the Home Assistant.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>url</strong> – Configuration URL to publish. </p>
 </dd>
 </dl>
@@ -318,7 +319,7 @@
 <span id="_CPPv3N8HADevice15setAvailabilityEb"></span><span id="_CPPv2N8HADevice15setAvailabilityEb"></span><span id="HADevice::setAvailability__b"></span><span class="target" id="class_h_a_device_1a3eac570f51a76789f0564714166c674a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAvailability</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">online</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HADevice15setAvailabilityEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets device’s availability and publishes MQTT message on the availability topic. If the device is not connected to an MQTT broker or the shared availability is not enabled then nothing happens.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>online</strong> – Set to true if the device should be displayed as available in the HA panel. </p>
 </dd>
 </dl>
@@ -407,7 +408,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

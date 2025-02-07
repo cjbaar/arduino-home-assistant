@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HASensor class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="hasensor-class">
-<h1>HASensor class<a class="headerlink" href="#hasensor-class" title="Permalink to this headline">¶</a></h1>
+<h1>HASensor class<a class="headerlink" href="#hasensor-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv48HASensor">
 <span id="_CPPv38HASensor"></span><span id="_CPPv28HASensor"></span><span id="HASensor"></span><span class="target" id="class_h_a_sensor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HASensor</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv48HASensor" title="Permalink to this definition">¶</a><br /></dt>
@@ -189,7 +190,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N8HASensor8HASensorEPKcK8uint16_t">
 <span id="_CPPv3N8HASensor8HASensorEPKcK8uint16_t"></span><span id="_CPPv2N8HASensor8HASensorEPKcK8uint16_t"></span><span id="HASensor::HASensor__cCP.uint16_tC"></span><span class="target" id="class_h_a_sensor_1a96c8105258c10db536fdbd8e4c8004d4"></span><span class="sig-name descname"><span class="n"><span class="pre">HASensor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">features</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N8HASensor8Features15DefaultFeaturesE" title="HASensor::DefaultFeatures"><span class="n"><span class="pre">DefaultFeatures</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor8HASensorEPKcK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uniqueId</strong> – The unique ID of the sensor. It needs to be unique in a scope of your device. </p></li>
 <li><p><strong>features</strong> – Features that should be enabled for the sensor. </p></li>
@@ -203,10 +204,10 @@
 <span id="_CPPv3N8HASensor8setValueEPKc"></span><span id="_CPPv2N8HASensor8setValueEPKc"></span><span id="HASensor::setValue__cCP"></span><span class="target" id="class_h_a_sensor_1a47dba37f26cbf66d6cb9967734bc9c24"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setValue</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor8setValueEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given value. Unlike the other device types, the <a class="reference internal" href="#class_h_a_sensor"><span class="std std-ref">HASensor</span></a> doesn’t store the previous value that was set. It means that the MQTT message is produced each time the setValue method is called.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>value</strong> – String representation of the sensor’s value. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -217,7 +218,7 @@
 <span id="_CPPv3N8HASensor17setJsonAttributesEPKc"></span><span id="_CPPv2N8HASensor17setJsonAttributesEPKc"></span><span id="HASensor::setJsonAttributes__cCP"></span><span class="target" id="class_h_a_sensor_1a04e4a413bfae54813f42fb97b6473193"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setJsonAttributes</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">json</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor17setJsonAttributesEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the given JSON data on the JSON attributes topic. The <code class="docutils literal notranslate"><span class="pre">JsonAttributesFeature</span></code> has to be enabled prior to setting the value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>json</strong> – JSON attributes. </p>
 </dd>
 </dl>
@@ -228,7 +229,7 @@
 <span id="_CPPv3N8HASensor14setExpireAfterE8uint16_t"></span><span id="_CPPv2N8HASensor14setExpireAfterE8uint16_t"></span><span id="HASensor::setExpireAfter__uint16_t"></span><span class="target" id="class_h_a_sensor_1a11af92c3452c511596c63dbc00baed6e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setExpireAfter</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">expireAfter</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor14setExpireAfterE8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the number of seconds after the sensor’s state expires, if it’s not updated. By default the sensors state never expires.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>expireAfter</strong> – The number of seconds. </p>
 </dd>
 </dl>
@@ -239,7 +240,7 @@
 <span id="_CPPv3N8HASensor14setDeviceClassEPKc"></span><span id="_CPPv2N8HASensor14setDeviceClassEPKc"></span><span id="HASensor::setDeviceClass__cCP"></span><span class="target" id="class_h_a_sensor_1a8e2ffcb1ae1bb7411464a34d27df8817"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setDeviceClass</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">deviceClass</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor14setDeviceClassEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets class of the device. You can find list of available values here: <a class="reference external" href="https://www.home-assistant.io/integrations/sensor/#device-class">https://www.home-assistant.io/integrations/sensor/#device-class</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>deviceClass</strong> – The class name. </p>
 </dd>
 </dl>
@@ -250,7 +251,7 @@
 <span id="_CPPv3N8HASensor13setStateClassEPKc"></span><span id="_CPPv2N8HASensor13setStateClassEPKc"></span><span id="HASensor::setStateClass__cCP"></span><span class="target" id="class_h_a_sensor_1a1e246b6728645eeb0b1d190b52221780"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setStateClass</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">stateClass</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor13setStateClassEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets class of the state for the long term stats. See: <a class="reference external" href="https://developers.home-assistant.io/docs/core/entity/sensor/#long-term-statistics">https://developers.home-assistant.io/docs/core/entity/sensor/#long-term-statistics</a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>stateClass</strong> – The class name. </p>
 </dd>
 </dl>
@@ -261,7 +262,7 @@
 <span id="_CPPv3N8HASensor14setForceUpdateEb"></span><span id="_CPPv2N8HASensor14setForceUpdateEb"></span><span id="HASensor::setForceUpdate__b"></span><span class="target" id="class_h_a_sensor_1adb8db20cf6c35033c6653ab10de319cb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setForceUpdate</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">forceUpdate</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor14setForceUpdateEb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Forces HA panel to process each incoming value (MQTT message). It’s useful if you want to have meaningful value graphs in history.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>forceUpdate</strong> – </p>
 </dd>
 </dl>
@@ -272,7 +273,7 @@
 <span id="_CPPv3N8HASensor7setIconEPKc"></span><span id="_CPPv2N8HASensor7setIconEPKc"></span><span id="HASensor::setIcon__cCP"></span><span class="target" id="class_h_a_sensor_1abc06a58cd84ecd2a8c1ddb3c305dfb7b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets icon of the sensor. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>class</strong> – The icon name. </p>
 </dd>
 </dl>
@@ -283,7 +284,7 @@
 <span id="_CPPv3N8HASensor20setUnitOfMeasurementEPKc"></span><span id="_CPPv2N8HASensor20setUnitOfMeasurementEPKc"></span><span id="HASensor::setUnitOfMeasurement__cCP"></span><span class="target" id="class_h_a_sensor_1aab81b220cc390558090e81177e2b1a11"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setUnitOfMeasurement</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">unitOfMeasurement</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASensor20setUnitOfMeasurementEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Defines the units of measurement of the sensor, if any.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>units</strong> – For example: °C, % </p>
 </dd>
 </dl>
@@ -367,7 +368,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

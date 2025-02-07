@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HADeviceTracker class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="hadevicetracker-class">
-<h1>HADeviceTracker class<a class="headerlink" href="#hadevicetracker-class" title="Permalink to this headline">¶</a></h1>
+<h1>HADeviceTracker class<a class="headerlink" href="#hadevicetracker-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv415HADeviceTracker">
 <span id="_CPPv315HADeviceTracker"></span><span id="_CPPv215HADeviceTracker"></span><span id="HADeviceTracker"></span><span class="target" id="class_h_a_device_tracker"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTracker</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv415HADeviceTracker" title="Permalink to this definition">¶</a><br /></dt>
@@ -227,7 +228,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N15HADeviceTracker15HADeviceTrackerEPKc">
 <span id="_CPPv3N15HADeviceTracker15HADeviceTrackerEPKc"></span><span id="_CPPv2N15HADeviceTracker15HADeviceTrackerEPKc"></span><span id="HADeviceTracker::HADeviceTracker__cCP"></span><span class="target" id="class_h_a_device_tracker_1ad93d8a008fc52e8dce708b0d538f51af"></span><span class="sig-name descname"><span class="n"><span class="pre">HADeviceTracker</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTracker15HADeviceTrackerEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>uniqueId</strong> – The unique ID of the tracker. It needs to be unique in a scope of your device. </p>
 </dd>
 </dl>
@@ -238,13 +239,13 @@
 <span id="_CPPv3N15HADeviceTracker8setStateEK12TrackerStateKb"></span><span id="_CPPv2N15HADeviceTracker8setStateEK12TrackerStateKb"></span><span id="HADeviceTracker::setState__TrackerStateC.bC"></span><span class="target" id="class_h_a_device_tracker_1ac36ef94bb91c143301f35ecec2f47b66"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15HADeviceTracker12TrackerStateE" title="HADeviceTracker::TrackerState"><span class="n"><span class="pre">TrackerState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTracker8setStateEK12TrackerStateKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes the state of the tracker and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>state</strong> – The new state of the tracker. </p></li>
 <li><p><strong>force</strong> – Forces to update the state without comparing it to a previous known state. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -255,7 +256,7 @@
 <span id="_CPPv3N15HADeviceTracker15setCurrentStateEK12TrackerState"></span><span id="_CPPv2N15HADeviceTracker15setCurrentStateEK12TrackerState"></span><span id="HADeviceTracker::setCurrentState__TrackerStateC"></span><span class="target" id="class_h_a_device_tracker_1a58e49bf4027e3cb9e4f45177d4ed2bb0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15HADeviceTracker12TrackerStateE" title="HADeviceTracker::TrackerState"><span class="n"><span class="pre">TrackerState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTracker15setCurrentStateEK12TrackerState" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the current state of the tracker without publishing it to Home Assistant. This method may be useful if you want to change the state before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The new state of the tracker. </p>
 </dd>
 </dl>
@@ -272,7 +273,7 @@
 <span id="_CPPv3N15HADeviceTracker7setIconEPKc"></span><span id="_CPPv2N15HADeviceTracker7setIconEPKc"></span><span id="HADeviceTracker::setIcon__cCP"></span><span class="target" id="class_h_a_device_tracker_1a727faee54b475aae5351afe7b3e72bf9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTracker7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets icon of the tracker. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>icon</strong> – The icon name. </p>
 </dd>
 </dl>
@@ -283,7 +284,7 @@
 <span id="_CPPv3N15HADeviceTracker13setSourceTypeEK10SourceType"></span><span id="_CPPv2N15HADeviceTracker13setSourceTypeEK10SourceType"></span><span id="HADeviceTracker::setSourceType__SourceTypeC"></span><span class="target" id="class_h_a_device_tracker_1ac5ae4dfb5dea532dc3b891524f6ceb62"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSourceType</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N15HADeviceTracker10SourceTypeE" title="HADeviceTracker::SourceType"><span class="n"><span class="pre">SourceType</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTracker13setSourceTypeEK10SourceType" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the source type of the tracker.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>type</strong> – The source type (gps, router, bluetooth, bluetooth LE). </p>
 </dd>
 </dl>
@@ -310,10 +311,10 @@
 <span id="_CPPv3N15HADeviceTracker12publishStateE12TrackerState"></span><span id="_CPPv2N15HADeviceTracker12publishStateE12TrackerState"></span><span id="HADeviceTracker::publishState__TrackerState"></span><span class="target" id="class_h_a_device_tracker_1ae3e5c8aa3e12702052fc65badc4fb7c2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishState</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N15HADeviceTracker12TrackerStateE" title="HADeviceTracker::TrackerState"><span class="n"><span class="pre">TrackerState</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N15HADeviceTracker12publishStateE12TrackerState" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given state.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The state to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -366,7 +367,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HASelect class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="haselect-class">
-<h1>HASelect class<a class="headerlink" href="#haselect-class" title="Permalink to this headline">¶</a></h1>
+<h1>HASelect class<a class="headerlink" href="#haselect-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv48HASelect">
 <span id="_CPPv38HASelect"></span><span id="_CPPv28HASelect"></span><span id="HASelect"></span><span class="target" id="class_h_a_select"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HASelect</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv48HASelect" title="Permalink to this definition">¶</a><br /></dt>
@@ -165,7 +166,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N8HASelect8HASelectEPKc">
 <span id="_CPPv3N8HASelect8HASelectEPKc"></span><span id="_CPPv2N8HASelect8HASelectEPKc"></span><span id="HASelect::HASelect__cCP"></span><span class="target" id="class_h_a_select_1a6cad6cd7fcb544573e1fc4896fa245ae"></span><span class="sig-name descname"><span class="n"><span class="pre">HASelect</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect8HASelectEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>uniqueId</strong> – The unique ID of the select. It needs to be unique in a scope of your device. </p>
 </dd>
 </dl>
@@ -185,7 +186,7 @@
 <p>The options list can be set only once. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>options</strong> – The list of options that are separated by semicolons. </p>
 </dd>
 </dl>
@@ -196,13 +197,13 @@
 <span id="_CPPv3N8HASelect8setStateEK6int8_tKb"></span><span id="_CPPv2N8HASelect8setStateEK6int8_tKb"></span><span id="HASelect::setState__int8_tC.bC"></span><span class="target" id="class_h_a_select_1a810f425f40428d8526f46aaa81d12c69"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect8setStateEK6int8_tKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes state of the select and publishes MQTT message. State represents the index of the option that was set using the setOptions method. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>state</strong> – New state of the select. You can set <code class="docutils literal notranslate"><span class="pre">-1</span></code> to reset the select. </p></li>
 <li><p><strong>force</strong> – Forces to update state without comparing it to previous known state. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns true if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -219,7 +220,7 @@
 <span id="_CPPv3N8HASelect15setCurrentStateEK6int8_t"></span><span id="_CPPv2N8HASelect15setCurrentStateEK6int8_t"></span><span id="HASelect::setCurrentState__int8_tC"></span><span class="target" id="class_h_a_select_1a3ce2a5372c12323e5bd1a29aada88aee"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect15setCurrentStateEK6int8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the current state of the select without publishing it to Home Assistant. State represents the index of the option that was set using the setOptions method. This method may be useful if you want to change the state before the connection with the MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The new state of the cover. </p>
 </dd>
 </dl>
@@ -236,7 +237,7 @@
 <span id="_CPPv3N8HASelect7setIconEPKc"></span><span id="_CPPv2N8HASelect7setIconEPKc"></span><span id="HASelect::setIcon__cCP"></span><span class="target" id="class_h_a_select_1a25f95626fff8ec8c93acdd9155a47c63"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets icon of the select. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>icon</strong> – The icon name. </p>
 </dd>
 </dl>
@@ -247,7 +248,7 @@
 <span id="_CPPv3N8HASelect9setRetainEKb"></span><span id="_CPPv2N8HASelect9setRetainEKb"></span><span id="HASelect::setRetain__bC"></span><span class="target" id="class_h_a_select_1a22b85508c745a05299a2b44ea375719e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRetain</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">retain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect9setRetainEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets retain flag for the select’s command. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the command produced by Home Assistant will be retained.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>retain</strong> – </p>
 </dd>
 </dl>
@@ -258,7 +259,7 @@
 <span id="_CPPv3N8HASelect13setOptimisticEKb"></span><span id="_CPPv2N8HASelect13setOptimisticEKb"></span><span id="HASelect::setOptimistic__bC"></span><span class="target" id="class_h_a_select_1ad97a29c2e40baf3aa2c4ab610398b71c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOptimistic</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">optimistic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect13setOptimisticEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets optimistic flag for the select state. In this mode the select state doesn’t need to be reported back to the HA panel when a command is received. By default the optimistic mode is disabled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>optimistic</strong> – The optimistic mode (<code class="docutils literal notranslate"><span class="pre">true</span></code> - enabled, <code class="docutils literal notranslate"><span class="pre">false</span></code> - disabled). </p>
 </dd>
 </dl>
@@ -273,7 +274,7 @@
 <p>In non-optimistic mode, the selected option must be reported back to HA using the <a class="reference internal" href="#class_h_a_select_1a810f425f40428d8526f46aaa81d12c69"><span class="std std-ref">HASelect::setState</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -305,10 +306,10 @@
 <span id="_CPPv3N8HASelect12publishStateEK6int8_t"></span><span id="_CPPv2N8HASelect12publishStateEK6int8_t"></span><span id="HASelect::publishState__int8_tC"></span><span class="target" id="class_h_a_select_1a5b025f58e8bec5acb0d730482f5b1c57"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N8HASelect12publishStateEK6int8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given state.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The state to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -379,7 +380,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

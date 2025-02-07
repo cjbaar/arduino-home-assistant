@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>Discovery - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/custom.js"></script>
 
@@ -148,14 +149,14 @@
           <div class="content" role="main" v-pre>
             
   <section id="discovery">
-<h1>Discovery<a class="headerlink" href="#discovery" title="Permalink to this headline">¶</a></h1>
+<h1>Discovery<a class="headerlink" href="#discovery" title="Permalink to this heading">¶</a></h1>
 <p>The library automatically maintains connection to the MQTT broker and takes care of the discovery process.
 Each device type that you create (sensor, switch, light, fan, etc.) is automatically registered in MQTT manager.
 Whenever connection with the MQTT broker is acquired the configuration of all device types is pushed to the Home Assistant.</p>
 <p>There is one basic rule that you need to follow: device types need to be constructed after <a class="reference internal" href="../api/core/ha-mqtt.html"><span class="doc">HAMqtt</span></a> class.
 That’s because device types are relying on <a class="reference internal" href="../api/core/ha-mqtt.html"><span class="doc">HAMqtt</span></a> instance internally.</p>
 <section id="topics-prefix">
-<h2>Topics prefix<a class="headerlink" href="#topics-prefix" title="Permalink to this headline">¶</a></h2>
+<h2>Topics prefix<a class="headerlink" href="#topics-prefix" title="Permalink to this heading">¶</a></h2>
 <p>In some cases you may need to change prefix of MQTT topics.
 There are two types of topics utilized by the library:</p>
 <ul class="simple">
@@ -164,26 +165,26 @@ There are two types of topics utilized by the library:</p>
 </ul>
 <p>The discovery topic’s prefix can be changed using <code class="docutils literal notranslate"><span class="pre">HAMqtt::setDiscoveryPrefix(const</span> <span class="pre">char*</span> <span class="pre">prefix)</span></code> method.
 The data topic’s prefix can be changed using <code class="docutils literal notranslate"><span class="pre">HAMqtt::setDataPrefix(const</span> <span class="pre">char*</span> <span class="pre">prefix)</span></code> method</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Ethernet.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ArduinoHA.h&gt;</span>
 
-<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span><span class="w"></span>
-<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span><span class="w"></span>
-<span class="n">HADevice</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">mac</span><span class="p">));</span><span class="w"></span>
-<span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">);</span><span class="w"></span>
+<span class="n">byte</span><span class="w"> </span><span class="n">mac</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mh">0x00</span><span class="p">,</span><span class="w"> </span><span class="mh">0x10</span><span class="p">,</span><span class="w"> </span><span class="mh">0xFA</span><span class="p">,</span><span class="w"> </span><span class="mh">0x6E</span><span class="p">,</span><span class="w"> </span><span class="mh">0x38</span><span class="p">,</span><span class="w"> </span><span class="mh">0x4A</span><span class="p">};</span>
+<span class="n">EthernetClient</span><span class="w"> </span><span class="n">client</span><span class="p">;</span>
+<span class="n">HADevice</span><span class="w"> </span><span class="nf">device</span><span class="p">(</span><span class="n">mac</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">mac</span><span class="p">));</span>
+<span class="n">HAMqtt</span><span class="w"> </span><span class="nf">mqtt</span><span class="p">(</span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">device</span><span class="p">);</span>
 
 <span class="c1">// register your device types here</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">mqtt</span><span class="p">.</span><span class="n">setDiscoveryPrefix</span><span class="p">(</span><span class="s">&quot;myCustomPrefix&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">mqtt</span><span class="p">.</span><span class="n">setDataPrefix</span><span class="p">(</span><span class="s">&quot;myDataPrefix&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">mqtt</span><span class="p">.</span><span class="n">setDiscoveryPrefix</span><span class="p">(</span><span class="s">&quot;myCustomPrefix&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">mqtt</span><span class="p">.</span><span class="n">setDataPrefix</span><span class="p">(</span><span class="s">&quot;myDataPrefix&quot;</span><span class="p">);</span>
 
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -204,7 +205,7 @@ The data topic’s prefix can be changed using <code class="docutils literal not
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

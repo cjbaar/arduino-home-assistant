@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>Installation - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/custom.js"></script>
 
@@ -148,12 +149,12 @@
           <div class="content" role="main" v-pre>
             
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h1>
 <p>There are two ways to install the library depending on your project.
 If you’re using Arduino IDE to compile your project you only need to install the library into the IDE.</p>
 <p>The second method is meant for more advanced users that use <em>makeEspArduino</em> for building the project for ESP32/ESP8266 devices.</p>
 <section id="arduino-ide">
-<h2>Arduino IDE<a class="headerlink" href="#arduino-ide" title="Permalink to this headline">¶</a></h2>
+<h2>Arduino IDE<a class="headerlink" href="#arduino-ide" title="Permalink to this heading">¶</a></h2>
 <p>To install the library into your Arduino IDE you can use Library Manager (available from IDE version 1.6.2).
 Open the IDE and click to the “Sketch” menu and then <em>Include Library &gt; Manage Libraries</em>.</p>
 <img alt="../../_images/manage-libraries.png" class="align-center" src="../../_images/manage-libraries.png" style="width: 500px;" />
@@ -162,17 +163,17 @@ Open the IDE and click to the “Sketch” menu and then <em>Include Library &gt
 <p>For other installation methods please refer to <a class="reference external" href="https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries">Arduino documentation</a>.</p>
 </section>
 <section id="makeesparduino">
-<h2>makeEspArduino<a class="headerlink" href="#makeesparduino" title="Permalink to this headline">¶</a></h2>
+<h2>makeEspArduino<a class="headerlink" href="#makeesparduino" title="Permalink to this heading">¶</a></h2>
 <p>The library can be installed in an environment managed by <a class="reference external" href="https://github.com/plerup/makeEspArduino">makeEspArduino</a>.
 The best approach is to add the library and its dependency as submodules in the project as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">git</span><span class="w"> </span><span class="n">submodule</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">https</span><span class="o">:</span><span class="c1">//github.com/dawidchyrzynski/arduino-home-assistant.git arduino-home-assistant</span>
-<span class="n">cd</span><span class="w"> </span><span class="n">arduino</span><span class="o">-</span><span class="n">home</span><span class="o">-</span><span class="n">assistant</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">tags</span><span class="o">/</span><span class="mf">2.0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="p">..</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="n">arduino</span><span class="o">-</span><span class="n">home</span><span class="o">-</span><span class="n">assistant</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">tags</span><span class="o">/</span><span class="mf">2.0.0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="p">..</span>
 <span class="n">git</span><span class="w"> </span><span class="n">submodule</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="n">https</span><span class="o">:</span><span class="c1">//github.com/knolleary/pubsubclient.git pubsubclient</span>
-<span class="n">cd</span><span class="w"> </span><span class="n">pubsubclient</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">tags</span><span class="o">/</span><span class="n">v2</span><span class="mf">.8</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="n">pubsubclient</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">checkout</span><span class="w"> </span><span class="n">tags</span><span class="o">/</span><span class="n">v2</span><span class="mf">.8</span>
 </pre></div>
 </div>
 <p>Then you just need to add one extra line in your <cite>Makefile</cite>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">LIBS</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">$</span><span class="p">(</span><span class="n">ROOT</span><span class="p">)</span><span class="o">/</span><span class="n">arduino</span><span class="o">-</span><span class="n">home</span><span class="o">-</span><span class="n">assistant</span><span class="w"> </span><span class="n">$</span><span class="p">(</span><span class="n">ROOT</span><span class="p">)</span><span class="o">/</span><span class="n">pubsubclient</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">LIBS</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">$</span><span class="p">(</span><span class="n">ROOT</span><span class="p">)</span><span class="o">/</span><span class="n">arduino</span><span class="o">-</span><span class="n">home</span><span class="o">-</span><span class="n">assistant</span><span class="w"> </span><span class="n">$</span><span class="p">(</span><span class="n">ROOT</span><span class="p">)</span><span class="o">/</span><span class="n">pubsubclient</span>
 </pre></div>
 </div>
 </section>
@@ -193,7 +194,7 @@ The best approach is to add the library and its dependency as submodules in the 
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html >
+<html  lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
       <title>HALight class - ArduinoHA</title>
     
@@ -14,6 +14,7 @@
         <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
         <script src="../../../_static/jquery.js"></script>
         <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../../_static/doctools.js"></script>
         <script src="../../../_static/custom.js"></script>
 
@@ -150,7 +151,7 @@
           <div class="content" role="main" v-pre>
             
   <section id="halight-class">
-<h1>HALight class<a class="headerlink" href="#halight-class" title="Permalink to this headline">¶</a></h1>
+<h1>HALight class<a class="headerlink" href="#halight-class" title="Permalink to this heading">¶</a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv47HALight">
 <span id="_CPPv37HALight"></span><span id="_CPPv27HALight"></span><span id="HALight"></span><span class="target" id="class_h_a_light"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HALight</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="ha-base-device-type.html#_CPPv416HABaseDeviceType" title="HABaseDeviceType"><span class="n"><span class="pre">HABaseDeviceType</span></span></a><a class="headerlink" href="#_CPPv47HALight" title="Permalink to this definition">¶</a><br /></dt>
@@ -194,7 +195,7 @@
 <dt class="sig sig-object cpp" id="_CPPv4N7HALight7HALightEPKcK7uint8_t">
 <span id="_CPPv3N7HALight7HALightEPKcK7uint8_t"></span><span id="_CPPv2N7HALight7HALightEPKcK7uint8_t"></span><span id="HALight::HALight__cCP.uint8_tC"></span><span class="target" id="class_h_a_light_1a8f6f3e1184207af786c36ebe602e71dc"></span><span class="sig-name descname"><span class="n"><span class="pre">HALight</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">uniqueId</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">features</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HALight8Features15DefaultFeaturesE" title="HALight::DefaultFeatures"><span class="n"><span class="pre">DefaultFeatures</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight7HALightEPKcK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>uniqueId</strong> – The unique ID of the light. It needs to be unique in a scope of your device. </p></li>
 <li><p><strong>features</strong> – Features that should be enabled for the light. You can enable multiple features by using OR bitwise operator, for example: <code class="docutils literal notranslate"><span class="pre">HALight::BrightnessFeature</span> <span class="pre">|</span> <span class="pre">HALight::ColorTemperatureFeature</span></code> </p></li>
@@ -208,13 +209,13 @@
 <span id="_CPPv3N7HALight8setStateEKbKb"></span><span id="_CPPv2N7HALight8setStateEKbKb"></span><span id="HALight::setState__bC.bC"></span><span class="target" id="class_h_a_light_1a5e84fdff0a3b437041d2bd485e90df5f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight8setStateEKbKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes state of the light and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>state</strong> – New state of the light. </p></li>
 <li><p><strong>force</strong> – Forces to update state without comparing it to previous known state. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -225,13 +226,13 @@
 <span id="_CPPv3N7HALight13setBrightnessEK7uint8_tKb"></span><span id="_CPPv2N7HALight13setBrightnessEK7uint8_tKb"></span><span id="HALight::setBrightness__uint8_tC.bC"></span><span class="target" id="class_h_a_light_1a21dfe94eec97d858cba1b057033d5124"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBrightness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">brightness</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight13setBrightnessEK7uint8_tKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes the brightness of the light and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>brightness</strong> – The new brightness of the light. </p></li>
 <li><p><strong>force</strong> – Forces to update the value without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -242,13 +243,13 @@
 <span id="_CPPv3N7HALight19setColorTemperatureEK8uint16_tKb"></span><span id="_CPPv2N7HALight19setColorTemperatureEK8uint16_tKb"></span><span id="HALight::setColorTemperature__uint16_tC.bC"></span><span class="target" id="class_h_a_light_1aea384cd1b758520c21ee53a97c046ca8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setColorTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temperature</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight19setColorTemperatureEK8uint16_tKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes the color temperature of the light and publishes MQTT message. Please note that if a new value is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>temperature</strong> – The new color temperature of the light. </p></li>
 <li><p><strong>force</strong> – Forces to update the value without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -259,13 +260,13 @@
 <span id="_CPPv3N7HALight11setRGBColorERK8RGBColorKb"></span><span id="_CPPv2N7HALight11setRGBColorERK8RGBColorKb"></span><span id="HALight::setRGBColor__RGBColorCR.bC"></span><span class="target" id="class_h_a_light_1ada74864dd1799168b1bb077fdf4f418d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRGBColor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HALight8RGBColorE" title="HALight::RGBColor"><span class="n"><span class="pre">RGBColor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">color</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">force</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight11setRGBColorERK8RGBColorKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Changes the RGB color of the light and publishes MQTT message. Please note that if a new color is the same as previous one, the MQTT message won’t be published.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>color</strong> – The new RGB color of the light. </p></li>
 <li><p><strong>force</strong> – Forces to update the value without comparing it to a previous known value. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -288,7 +289,7 @@
 <span id="_CPPv3N7HALight15setCurrentStateEKb"></span><span id="_CPPv2N7HALight15setCurrentStateEKb"></span><span id="HALight::setCurrentState__bC"></span><span class="target" id="class_h_a_light_1a2c98c9bdc1ffd821b84eac8093b713ce"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight15setCurrentStateEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets current state of the light without publishing it to Home Assistant. This method may be useful if you want to change state before connection with MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – New state of the light. </p>
 </dd>
 </dl>
@@ -305,7 +306,7 @@
 <span id="_CPPv3N7HALight20setCurrentBrightnessEK7uint8_t"></span><span id="_CPPv2N7HALight20setCurrentBrightnessEK7uint8_t"></span><span id="HALight::setCurrentBrightness__uint8_tC"></span><span class="target" id="class_h_a_light_1ac4cb2771682305b8ecba6faf57cb97c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentBrightness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">brightness</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight20setCurrentBrightnessEK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the current brightness of the light without pushing the value to Home Assistant. This method may be useful if you want to change the brightness before the connection with the MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>brightness</strong> – The new brightness of the light. </p>
 </dd>
 </dl>
@@ -322,7 +323,7 @@
 <span id="_CPPv3N7HALight26setCurrentColorTemperatureEK8uint16_t"></span><span id="_CPPv2N7HALight26setCurrentColorTemperatureEK8uint16_t"></span><span id="HALight::setCurrentColorTemperature__uint16_tC"></span><span class="target" id="class_h_a_light_1a07eb4d3299ab2d4e465dd3fab9af8ea3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentColorTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight26setCurrentColorTemperatureEK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the current color temperature of the light without pushing the value to Home Assistant. This method may be useful if you want to change the color temperature before the connection with the MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>colorTemp</strong> – The new color temperature (mireds). </p>
 </dd>
 </dl>
@@ -339,7 +340,7 @@
 <span id="_CPPv3N7HALight18setCurrentRGBColorERK8RGBColor"></span><span id="_CPPv2N7HALight18setCurrentRGBColorERK8RGBColor"></span><span id="HALight::setCurrentRGBColor__RGBColorCR"></span><span class="target" id="class_h_a_light_1a022f557d9b95b7883682215f82a998c5"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setCurrentRGBColor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HALight8RGBColorE" title="HALight::RGBColor"><span class="n"><span class="pre">RGBColor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">color</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight18setCurrentRGBColorERK8RGBColor" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the current RGB color of the light without pushing the value to Home Assistant. This method may be useful if you want to change the color before the connection with the MQTT broker is acquired.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>color</strong> – The new RGB color. </p>
 </dd>
 </dl>
@@ -356,7 +357,7 @@
 <span id="_CPPv3N7HALight7setIconEPKc"></span><span id="_CPPv2N7HALight7setIconEPKc"></span><span id="HALight::setIcon__cCP"></span><span class="target" id="class_h_a_light_1af68c2caf4cdfeaeb382868800e1f5545"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIcon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">icon</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight7setIconEPKc" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets icon of the light. Any icon from MaterialDesignIcons.com (for example: <code class="docutils literal notranslate"><span class="pre">mdi:home</span></code>).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>icon</strong> – The icon name. </p>
 </dd>
 </dl>
@@ -367,7 +368,7 @@
 <span id="_CPPv3N7HALight9setRetainEKb"></span><span id="_CPPv2N7HALight9setRetainEKb"></span><span id="HALight::setRetain__bC"></span><span class="target" id="class_h_a_light_1ad141999630bff120289680150e960601"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRetain</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">retain</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight9setRetainEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets retain flag for the light’s command. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code> the command produced by Home Assistant will be retained.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>retain</strong> – </p>
 </dd>
 </dl>
@@ -378,7 +379,7 @@
 <span id="_CPPv3N7HALight13setOptimisticEKb"></span><span id="_CPPv2N7HALight13setOptimisticEKb"></span><span id="HALight::setOptimistic__bC"></span><span class="target" id="class_h_a_light_1a0cff71d00dee8da9cef6a435ab5e496d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setOptimistic</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">optimistic</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight13setOptimisticEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets optimistic flag for the light state. In this mode the light state doesn’t need to be reported back to the HA panel when a command is received. By default the optimistic mode is disabled.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>optimistic</strong> – The optimistic mode (<code class="docutils literal notranslate"><span class="pre">true</span></code> - enabled, <code class="docutils literal notranslate"><span class="pre">false</span></code> - disabled). </p>
 </dd>
 </dl>
@@ -389,7 +390,7 @@
 <span id="_CPPv3N7HALight18setBrightnessScaleEK7uint8_t"></span><span id="_CPPv2N7HALight18setBrightnessScaleEK7uint8_t"></span><span id="HALight::setBrightnessScale__uint8_tC"></span><span class="target" id="class_h_a_light_1a851b377064ebafbc75f0276315d9a4fb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBrightnessScale</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">scale</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight18setBrightnessScaleEK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the maximum brightness value that can be set via HA panel. By default it’s <code class="docutils literal notranslate"><span class="pre">255</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>scale</strong> – The maximum value of the brightness. </p>
 </dd>
 </dl>
@@ -400,7 +401,7 @@
 <span id="_CPPv3N7HALight12setMinMiredsEK8uint16_t"></span><span id="_CPPv2N7HALight12setMinMiredsEK8uint16_t"></span><span id="HALight::setMinMireds__uint16_tC"></span><span class="target" id="class_h_a_light_1a54d17e3031e33f04262c613040279df6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMinMireds</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mireds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight12setMinMiredsEK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the minimum color temperature (mireds) value that can be set via HA panel. By default it’s <code class="docutils literal notranslate"><span class="pre">153</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mireds</strong> – The minimum value of the brightness. </p>
 </dd>
 </dl>
@@ -411,7 +412,7 @@
 <span id="_CPPv3N7HALight12setMaxMiredsEK8uint16_t"></span><span id="_CPPv2N7HALight12setMaxMiredsEK8uint16_t"></span><span id="HALight::setMaxMireds__uint16_tC"></span><span class="target" id="class_h_a_light_1a5e385baf02ecc531d0bcca5db9f97bcd"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMaxMireds</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mireds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight12setMaxMiredsEK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the maximum color temperature (mireds) value that can be set via HA panel. By default it’s <code class="docutils literal notranslate"><span class="pre">500</span></code>.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>mireds</strong> – The maximum value of the brightness. </p>
 </dd>
 </dl>
@@ -426,7 +427,7 @@
 <p>In non-optimistic mode, the state must be reported back to HA using the <a class="reference internal" href="#class_h_a_light_1a5e84fdff0a3b437041d2bd485e90df5f"><span class="std std-ref">HALight::setState</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -441,7 +442,7 @@
 <p>In non-optimistic mode, the brightness must be reported back to HA using the <a class="reference internal" href="#class_h_a_light_1a21dfe94eec97d858cba1b057033d5124"><span class="std std-ref">HALight::setBrightness</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -456,7 +457,7 @@
 <p>In non-optimistic mode, the color temperature must be reported back to HA using the <a class="reference internal" href="#class_h_a_light_1aea384cd1b758520c21ee53a97c046ca8"><span class="std std-ref">HALight::setColorTemperature</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -471,7 +472,7 @@
 <p>In non-optimistic mode, the color must be reported back to HA using the <a class="reference internal" href="#class_h_a_light_1ada74864dd1799168b1bb077fdf4f418d"><span class="std std-ref">HALight::setRGBColor</span></a> method. </p>
 </div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>callback</strong> – </p>
 </dd>
 </dl>
@@ -511,10 +512,10 @@
 <span id="_CPPv3N7HALight12publishStateEKb"></span><span id="_CPPv2N7HALight12publishStateEKb"></span><span id="HALight::publishState__bC"></span><span class="target" id="class_h_a_light_1a54b5424f3e5e82462358b3e0578e4122"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishState</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight12publishStateEKb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given state.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – The state to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -525,10 +526,10 @@
 <span id="_CPPv3N7HALight17publishBrightnessEK7uint8_t"></span><span id="_CPPv2N7HALight17publishBrightnessEK7uint8_t"></span><span id="HALight::publishBrightness__uint8_tC"></span><span class="target" id="class_h_a_light_1a8ac981bd408b598523f0792f1b0f229d"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishBrightness</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">brightness</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight17publishBrightnessEK7uint8_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given brightness.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>brightness</strong> – The brightness to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -539,10 +540,10 @@
 <span id="_CPPv3N7HALight23publishColorTemperatureEK8uint16_t"></span><span id="_CPPv2N7HALight23publishColorTemperatureEK8uint16_t"></span><span id="HALight::publishColorTemperature__uint16_tC"></span><span class="target" id="class_h_a_light_1aa9977f1a0b231cbffd1c8043e61ff145"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishColorTemperature</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight23publishColorTemperatureEK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given color temperature (mireds).</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temperature</strong> – The color temperature to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -553,10 +554,10 @@
 <span id="_CPPv3N7HALight15publishRGBColorERK8RGBColor"></span><span id="_CPPv2N7HALight15publishRGBColorERK8RGBColor"></span><span id="HALight::publishRGBColor__RGBColorCR"></span><span class="target" id="class_h_a_light_1a69c08f53734ada7c8311518cc7ea6ce5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">publishRGBColor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7HALight8RGBColorE" title="HALight::RGBColor"><span class="n"><span class="pre">RGBColor</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">color</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight15publishRGBColorERK8RGBColor" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Publishes the MQTT message with the given RGB color.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>color</strong> – The color to publish. </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the MQTT message has been published successfully. </p>
 </dd>
 </dl>
@@ -567,7 +568,7 @@
 <span id="_CPPv3N7HALight18handleStateCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N7HALight18handleStateCommandEPK7uint8_tK8uint16_t"></span><span id="HALight::handleStateCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_light_1af1fac046b55b6c493a208e53f052a078"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleStateCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight18handleStateCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given state command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -581,7 +582,7 @@
 <span id="_CPPv3N7HALight23handleBrightnessCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N7HALight23handleBrightnessCommandEPK7uint8_tK8uint16_t"></span><span id="HALight::handleBrightnessCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_light_1a24c3c01bc3a84c9d8d3204290c24958e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleBrightnessCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight23handleBrightnessCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given brightness command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -595,7 +596,7 @@
 <span id="_CPPv3N7HALight29handleColorTemperatureCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N7HALight29handleColorTemperatureCommandEPK7uint8_tK8uint16_t"></span><span id="HALight::handleColorTemperatureCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_light_1a73d573761666da80a0a7794ae03f8a56"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleColorTemperatureCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight29handleColorTemperatureCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given color temperature command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -609,7 +610,7 @@
 <span id="_CPPv3N7HALight16handleRGBCommandEPK7uint8_tK8uint16_t"></span><span id="_CPPv2N7HALight16handleRGBCommandEPK7uint8_tK8uint16_t"></span><span id="HALight::handleRGBCommand__uint8_tCP.uint16_tC"></span><span class="target" id="class_h_a_light_1ab6c637a14ce6df83a5e0b2eb005b0f88"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">handleRGBCommand</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint8_t</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">cmd</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">uint16_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">length</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7HALight16handleRGBCommandEPK7uint8_tK8uint16_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Parses the given RGB color command and executes the callback with proper value.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>cmd</strong> – The data of the command. </p></li>
 <li><p><strong>length</strong> – Length of the command. </p></li>
@@ -792,7 +793,7 @@
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2022, Dawid Chyrzynski.
     <br>
-    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.0.2 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
 </div>
             </div>
           </div>
