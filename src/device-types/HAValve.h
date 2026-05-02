@@ -7,7 +7,7 @@
 
 #ifndef EX_ARDUINOHA_VALVE
 
-#define HAVALVE_CALLBACK(name) void (*name)(int16_t cmd, HAValve* sender)
+#define HAVALVE_CALLBACK(name) void (*name)(HAValve::ValveCommand cmd, HAValve* sender)
 
 /**
  * HAValve allows to control a valve (such as water or gas).
